@@ -1,141 +1,141 @@
-# 系统工具 (System Tools)
+# System Tools
 
-系统工具是一个综合性的 MCP 系统管理工具集，提供了系统状态监控、音量控制、设备管理等功能。
+System Tools is a comprehensive MCP system management toolset that provides system status monitoring, volume control, device management, and other functions.
 
-### 常见使用场景
+### Common Usage Scenarios
 
-**系统状态查询:**
-- "查看系统状态"
-- "现在系统运行怎么样"
-- "检查设备状态"
-- "系统有什么问题吗"
+**System Status Query:**
+- "View system status"
+- "How is the system running now"
+- "Check device status"
+- "Are there any system issues"
 
-**音量控制:**
-- "把音量调到50"
-- "音量调大一点"
-- "设置音量为80"
-- "现在音量是多少"
+**Volume Control:**
+- "Set volume to 50"
+- "Increase volume a bit"
+- "Set volume to 80"
+- "What is the current volume"
 
-**设备管理:**
-- "有多少个IoT设备连接"
-- "设备连接状态如何"
-- "查看设备列表"
-- "设备工作正常吗"
+**Device Management:**
+- "How many IoT devices are connected"
+- "What is the device connection status"
+- "View device list"
+- "Are devices working normally"
 
-**应用状态:**
-- "应用现在是什么状态"
-- "系统在忙吗"
-- "当前工作模式是什么"
-- "应用运行正常吗"
+**Application Status:**
+- "What is the application status now"
+- "Is the system busy"
+- "What is the current working mode"
+- "Is the application running normally"
 
-### 使用提示
+### Usage Tips
 
-1. **系统监控**: 定期查看系统状态了解设备健康状况
-2. **音量调节**: 可以精确设置音量数值或使用相对调节
-3. **设备检查**: 关注IoT设备的连接状态和数量
-4. **状态理解**: 了解不同设备状态的含义
+1. **System Monitoring**: Regularly check system status to understand device health
+2. **Volume Adjustment**: Can precisely set volume values or use relative adjustments
+3. **Device Check**: Pay attention to IoT device connection status and quantity
+4. **Status Understanding**: Understand the meaning of different device states
 
-AI 助手会根据您的需求自动调用系统工具，为您提供系统管理和监控服务。
+AI assistant will automatically call system tools based on your needs to provide system management and monitoring services.
 
-## 功能概览
+## Feature Overview
 
-### 系统状态监控
-- **完整状态**: 获取系统的完整运行状态
-- **音频状态**: 监控音频设备和音量状态
-- **应用状态**: 查看应用程序运行状态
-- **设备统计**: 统计IoT设备连接情况
+### System Status Monitoring
+- **Complete Status**: Get complete system running status
+- **Audio Status**: Monitor audio devices and volume status
+- **Application Status**: View application running status
+- **Device Statistics**: Count IoT device connections
 
-### 音量控制功能
-- **音量设置**: 精确设置系统音量
-- **音量查询**: 获取当前音量级别
-- **静音检测**: 检测系统是否处于静音状态
-- **音频设备**: 检查音频设备可用性
+### Volume Control Function
+- **Volume Setting**: Precisely set system volume
+- **Volume Query**: Get current volume level
+- **Mute Detection**: Detect if system is muted
+- **Audio Devices**: Check audio device availability
 
-### 设备管理功能
-- **设备状态**: 监控设备运行状态
-- **IoT设备**: 管理IoT设备连接
-- **设备计数**: 统计连接设备数量
-- **状态切换**: 跟踪设备状态变化
+### Device Management Function
+- **Device Status**: Monitor device running status
+- **IoT Devices**: Manage IoT device connections
+- **Device Count**: Count connected devices
+- **Status Tracking**: Track device status changes
 
-### 应用监控功能
-- **应用状态**: 监控应用程序状态
-- **工作模式**: 识别当前工作模式
-- **资源使用**: 监控资源使用情况
-- **错误处理**: 检测和报告系统错误
+### Application Monitoring Function
+- **Application Status**: Monitor application status
+- **Working Mode**: Identify current working mode
+- **Resource Usage**: Monitor resource usage
+- **Error Handling**: Detect and report system errors
 
-## 工具列表
+## Tool List
 
-### 1. 系统状态工具
+### 1. System Status Tool
 
-#### get_system_status - 获取系统状态
-获取完整的系统运行状态信息。
+#### get_system_status - Get System Status
+Get complete system running status information.
 
-**参数:**
-无
+**Parameters:**
+None
 
-**使用场景:**
-- 系统健康检查
-- 故障诊断
-- 状态监控
-- 性能评估
+**Usage Scenarios:**
+- System health check
+- Fault diagnosis
+- Status monitoring
+- Performance evaluation
 
-**返回信息:**
-- 音频设备状态
-- 应用程序状态
-- IoT设备统计
-- 系统错误信息
+**Return Information:**
+- Audio device status
+- Application status
+- IoT device statistics
+- System error information
 
-### 2. 音量控制工具
+### 2. Volume Control Tool
 
-#### set_volume - 设置音量
-设置系统音量到指定级别。
+#### set_volume - Set Volume
+Set system volume to specified level.
 
-**参数:**
-- `volume` (必需): 音量级别，范围0-100
+**Parameters:**
+- `volume` (Required): Volume level, range 0-100
 
-**使用场景:**
-- 音量调节
-- 音频控制
-- 环境适应
-- 用户偏好设置
+**Usage Scenarios:**
+- Volume adjustment
+- Audio control
+- Environment adaptation
+- User preference settings
 
-**特性:**
-- 音量范围验证
-- 依赖检查
-- 异步执行
-- 错误处理
+**Features:**
+- Volume range validation
+- Dependency checking
+- Asynchronous execution
+- Error handling
 
-## 使用示例
+## Usage Examples
 
-### 系统状态查询示例
+### System Status Query Example
 
 ```python
-# 获取完整系统状态
+# Get complete system status
 result = await mcp_server.call_tool("get_system_status", {})
 ```
 
-### 音量控制示例
+### Volume Control Example
 
 ```python
-# 设置音量到50
+# Set volume to 50
 result = await mcp_server.call_tool("set_volume", {
     "volume": 50
 })
 
-# 设置音量到最大
+# Set volume to maximum
 result = await mcp_server.call_tool("set_volume", {
     "volume": 100
 })
 
-# 设置音量到最小（静音）
+# Set volume to minimum (mute)
 result = await mcp_server.call_tool("set_volume", {
     "volume": 0
 })
 ```
 
-## 数据结构
+## Data Structures
 
-### 系统状态 (SystemStatus)
+### System Status (SystemStatus)
 ```python
 {
     "audio_speaker": {
@@ -155,33 +155,33 @@ result = await mcp_server.call_tool("set_volume", {
 }
 ```
 
-### 音频状态 (AudioStatus)
+### Audio Status (AudioStatus)
 ```python
 {
     "volume": 75,
     "muted": false,
     "available": true,
-    "device_name": "默认扬声器",
+    "device_name": "Default Speaker",
     "sample_rate": 44100,
     "channels": 2
 }
 ```
 
-### 应用状态 (ApplicationStatus)
+### Application Status (ApplicationStatus)
 ```python
 {
     "device_state": "IDLE",
     "iot_devices": 3,
-    "uptime": "2小时30分钟",
+    "uptime": "2 hours 30 minutes",
     "last_activity": "2024-01-15T10:28:00Z",
     "active_tasks": 2
 }
 ```
 
-### 错误状态 (ErrorStatus)
+### Error Status (ErrorStatus)
 ```python
 {
-    "error": "音量控制依赖不完整",
+    "error": "Volume control dependencies incomplete",
     "audio_speaker": {
         "volume": 50,
         "muted": false,
@@ -195,133 +195,133 @@ result = await mcp_server.call_tool("set_volume", {
 }
 ```
 
-## 设备状态说明
+## Device Status Description
 
-### 应用状态类型
-- **IDLE**: 空闲状态，等待用户输入
-- **LISTENING**: 正在监听语音输入
-- **SPEAKING**: 正在播放语音输出
-- **CONNECTING**: 正在连接服务
-- **PROCESSING**: 正在处理请求
-- **ERROR**: 出现错误状态
+### Application Status Types
+- **IDLE**: Idle state, waiting for user input
+- **LISTENING**: Listening to voice input
+- **SPEAKING**: Playing voice output
+- **CONNECTING**: Connecting to services
+- **PROCESSING**: Processing requests
+- **ERROR**: Error state occurred
 
-### 音频设备状态
-- **available**: 音频设备可用
-- **volume**: 当前音量级别 (0-100)
-- **muted**: 是否处于静音状态
-- **device_name**: 音频设备名称
+### Audio Device Status
+- **available**: Audio device available
+- **volume**: Current volume level (0-100)
+- **muted**: Whether muted
+- **device_name**: Audio device name
 
-### IoT设备状态
-- **connected**: 已连接的设备数量
-- **device_types**: 设备类型统计
-- **last_update**: 最后更新时间
-- **health_status**: 设备健康状态
+### IoT Device Status
+- **connected**: Number of connected devices
+- **device_types**: Device type statistics
+- **last_update**: Last update time
+- **health_status**: Device health status
 
-## 系统监控指标
+## System Monitoring Metrics
 
-### 性能指标
-- **CPU使用率**: 系统CPU占用百分比
-- **内存使用率**: 系统内存占用百分比
-- **磁盘使用率**: 磁盘空间占用百分比
-- **网络状态**: 网络连接状态
+### Performance Metrics
+- **CPU Usage**: System CPU usage percentage
+- **Memory Usage**: System memory usage percentage
+- **Disk Usage**: Disk space usage percentage
+- **Network Status**: Network connection status
 
-### 应用指标
-- **运行时间**: 应用程序运行时长
-- **活跃任务**: 当前活跃任务数量
-- **最后活动**: 最后一次活动时间
-- **错误计数**: 错误发生次数
+### Application Metrics
+- **Uptime**: Application running duration
+- **Active Tasks**: Current active task count
+- **Last Activity**: Last activity time
+- **Error Count**: Error occurrence count
 
-### 设备指标
-- **连接设备**: 已连接IoT设备数量
-- **设备类型**: 不同类型设备统计
-- **设备健康**: 设备健康状态评估
-- **连接质量**: 设备连接质量评估
+### Device Metrics
+- **Connected Devices**: Number of connected IoT devices
+- **Device Types**: Different type device statistics
+- **Device Health**: Device health status assessment
+- **Connection Quality**: Device connection quality assessment
 
-## 音量控制机制
+## Volume Control Mechanism
 
-### 音量设置流程
-1. **参数验证**: 验证音量值范围 (0-100)
-2. **依赖检查**: 检查音量控制依赖是否可用
-3. **异步执行**: 在线程池中执行音量设置
-4. **状态更新**: 更新系统音量状态
-5. **结果返回**: 返回设置结果
+### Volume Setting Process
+1. **Parameter Validation**: Validate volume value range (0-100)
+2. **Dependency Check**: Check if volume control dependencies are available
+3. **Asynchronous Execution**: Execute volume setting in thread pool
+4. **Status Update**: Update system volume status
+5. **Result Return**: Return setting result
 
-### 跨平台支持
-- **Windows**: 使用WASAPI接口
-- **macOS**: 使用CoreAudio框架
-- **Linux**: 使用ALSA/PulseAudio
-- **依赖管理**: 自动检测和加载平台依赖
+### Cross-platform Support
+- **Windows**: Use WASAPI interface
+- **macOS**: Use CoreAudio framework
+- **Linux**: Use ALSA/PulseAudio
+- **Dependency Management**: Automatically detect and load platform dependencies
 
-### 错误处理
-- **依赖缺失**: 检测并报告缺失的依赖
-- **权限问题**: 处理权限不足的情况
-- **设备不可用**: 处理音频设备不可用的情况
-- **参数错误**: 验证和处理参数错误
+### Error Handling
+- **Missing Dependencies**: Detect and report missing dependencies
+- **Permission Issues**: Handle insufficient permissions
+- **Device Unavailable**: Handle audio device unavailable situations
+- **Parameter Errors**: Validate and handle parameter errors
 
-## 最佳实践
+## Best Practices
 
-### 1. 系统监控
-- 定期检查系统状态
-- 关注性能指标变化
-- 及时处理错误状态
-- 监控设备连接状态
+### 1. System Monitoring
+- Regularly check system status
+- Monitor performance metric changes
+- Timely handle error states
+- Monitor device connection status
 
-### 2. 音量管理
-- 设置合适的音量级别
-- 考虑使用环境和时间
-- 定期检查音频设备状态
-- 处理音频设备故障
+### 2. Volume Management
+- Set appropriate volume levels
+- Consider usage environment and time
+- Regularly check audio device status
+- Handle audio device failures
 
-### 3. 设备管理
-- 监控IoT设备连接
-- 定期检查设备健康状态
-- 处理设备连接问题
-- 优化设备性能
+### 3. Device Management
+- Monitor IoT device connections
+- Regularly check device health status
+- Handle device connection issues
+- Optimize device performance
 
-### 4. 错误处理
-- 及时响应错误状态
-- 分析错误原因
-- 实施恢复措施
-- 记录错误日志
+### 4. Error Handling
+- Timely respond to error states
+- Analyze error causes
+- Implement recovery measures
+- Record error logs
 
-## 故障排除
+## Troubleshooting
 
-### 常见问题
-1. **音量设置失败**: 检查音频设备和依赖
-2. **系统状态异常**: 检查应用程序状态
-3. **设备连接问题**: 检查IoT设备连接
-4. **权限不足**: 检查系统权限设置
+### Common Issues
+1. **Volume Setting Failed**: Check audio devices and dependencies
+2. **System Status Abnormal**: Check application status
+3. **Device Connection Issues**: Check IoT device connections
+4. **Insufficient Permissions**: Check system permission settings
 
-### 调试方法
-1. 查看系统状态获取详细信息
-2. 检查错误日志和错误信息
-3. 验证依赖和权限设置
-4. 测试音频设备功能
+### Debugging Methods
+1. View system status for detailed information
+2. Check error logs and error information
+3. Verify dependencies and permission settings
+4. Test audio device functionality
 
-### 性能优化
-1. 定期清理系统缓存
-2. 优化IoT设备连接
-3. 监控资源使用情况
-4. 调整系统参数设置
+### Performance Optimization
+1. Regularly clean system cache
+2. Optimize IoT device connections
+3. Monitor resource usage
+4. Adjust system parameter settings
 
-## 安全考虑
+## Security Considerations
 
-### 权限管理
-- 音量控制需要适当权限
-- 系统状态访问权限控制
-- 设备管理权限验证
-- 用户操作权限检查
+### Permission Management
+- Volume control requires appropriate permissions
+- System status access permission control
+- Device management permission verification
+- User operation permission checking
 
-### 数据保护
-- 系统状态信息敏感性
-- 设备信息隐私保护
-- 操作日志安全存储
-- 错误信息脱敏处理
+### Data Protection
+- System status information sensitivity
+- Device information privacy protection
+- Operation log secure storage
+- Error information desensitization processing
 
-### 访问控制
-- 限制系统功能访问
-- 验证用户身份
-- 控制操作权限
-- 审计操作记录
+### Access Control
+- Limit system function access
+- Verify user identity
+- Control operation permissions
+- Audit operation records
 
-通过系统工具，您可以有效地监控和管理系统状态，确保设备正常运行和最佳性能。
+Through system tools, you can effectively monitor and manage system status, ensuring device normal operation and optimal performance.
