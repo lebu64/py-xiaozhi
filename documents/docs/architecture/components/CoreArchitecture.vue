@@ -1,7 +1,7 @@
 <template>
   <div class="chart-container">
     <div ref="architectureChart" class="w-full h-[500px]"></div>
-    <p class="chart-description">核心架构图：展示了应用核心、资源管理器、MCP服务器、通信协议层、音频处理系统、用户界面系统、IoT设备管理等模块的关系</p>
+    <p class="chart-description">Core Architecture Diagram: Shows the relationships between application core, resource manager, MCP server, communication protocol layer, audio processing system, user interface system, IoT device management and other modules</p>
   </div>
 </template>
 
@@ -18,9 +18,9 @@ const createChartOption = (darkMode) => ({
   animation: false,
   backgroundColor: 'transparent',
   color: darkMode ?
-    // 暗色模式：现代科技感配色 - 蓝紫系为主，辅以自然色彩
+    // Dark mode: Modern tech color scheme - blue-purple based, supplemented with natural colors
     ['#818cf8', '#34d399', '#fbbf24', '#fb7185', '#a78bfa', '#60a5fa', '#4ade80', '#fcd34d'] :
-    // 亮色模式：商务专业配色 - 深沉稳重，层次分明
+    // Light mode: Professional business color scheme - deep and stable, clearly layered
     ['#4338ca', '#059669', '#d97706', '#e11d48', '#7c3aed', '#0369a1', '#16a34a', '#ca8a04'],
   tooltip: {
     trigger: 'item',
@@ -36,7 +36,7 @@ const createChartOption = (darkMode) => ({
     orient: 'vertical',
     right: 10,
     top: 'center',
-    data: ['核心', '主要模块', '子模块'],
+    data: ['Core', 'Main Modules', 'Submodules'],
     textStyle: {
       color: darkMode ? '#f3f4f6' : '#374151'
     },
@@ -46,47 +46,47 @@ const createChartOption = (darkMode) => ({
   },
   series: [
     {
-      name: '架构图',
+      name: 'Architecture Diagram',
       type: 'graph',
       layout: 'force',
       data: [
-        { name: '应用核心', value: 'Application', category: 0, symbolSize: 70 },
-        { name: 'MCP服务器', value: 'MCP Server', category: 1, symbolSize: 50 },
-        { name: '通信协议层', value: 'Protocols', category: 1, symbolSize: 50 },
-        { name: '音频处理系统', value: 'Audio Processing', category: 1, symbolSize: 50 },
-        { name: '用户界面系统', value: 'UI System', category: 1, symbolSize: 50 },
-        { name: 'IoT设备管理', value: 'IoT Management', category: 1, symbolSize: 50 },
+        { name: 'Application Core', value: 'Application', category: 0, symbolSize: 70 },
+        { name: 'MCP Server', value: 'MCP Server', category: 1, symbolSize: 50 },
+        { name: 'Protocol Layer', value: 'Protocols', category: 1, symbolSize: 50 },
+        { name: 'Audio Processing System', value: 'Audio Processing', category: 1, symbolSize: 50 },
+        { name: 'UI System', value: 'UI System', category: 1, symbolSize: 50 },
+        { name: 'IoT Device Management', value: 'IoT Management', category: 1, symbolSize: 50 },
         { name: 'WebSocket', value: 'WebSocket', category: 2, symbolSize: 30 },
         { name: 'MQTT', value: 'MQTT', category: 2, symbolSize: 30 },
-        { name: 'MCP工具生态', value: 'MCP Tools Ecosystem', category: 2, symbolSize: 30 },
-        { name: 'AEC处理', value: 'AEC Processing', category: 2, symbolSize: 30 },
-        { name: 'VAD检测', value: 'VAD Detection', category: 2, symbolSize: 30 },
-        { name: '唤醒词检测', value: 'Wakeword Detection', category: 2, symbolSize: 30 },
+        { name: 'MCP Tools Ecosystem', value: 'MCP Tools Ecosystem', category: 2, symbolSize: 30 },
+        { name: 'AEC Processing', value: 'AEC Processing', category: 2, symbolSize: 30 },
+        { name: 'VAD Detection', value: 'VAD Detection', category: 2, symbolSize: 30 },
+        { name: 'Wakeword Detection', value: 'Wakeword Detection', category: 2, symbolSize: 30 },
         { name: 'PyQt5 GUI', value: 'PyQt5 GUI', category: 2, symbolSize: 30 },
-        { name: 'CLI界面', value: 'CLI Interface', category: 2, symbolSize: 30 },
-        { name: 'Thing抽象', value: 'Thing Abstract', category: 2, symbolSize: 30 },
-        { name: '智能家居', value: 'Smart Home', category: 2, symbolSize: 30 }
+        { name: 'CLI Interface', value: 'CLI Interface', category: 2, symbolSize: 30 },
+        { name: 'Thing Abstract', value: 'Thing Abstract', category: 2, symbolSize: 30 },
+        { name: 'Smart Home', value: 'Smart Home', category: 2, symbolSize: 30 }
       ],
       links: [
-        { source: '应用核心', target: 'MCP服务器' },
-        { source: '应用核心', target: '通信协议层' },
-        { source: '应用核心', target: '音频处理系统' },
-        { source: '应用核心', target: '用户界面系统' },
-        { source: '应用核心', target: 'IoT设备管理' },
-        { source: '通信协议层', target: 'WebSocket' },
-        { source: '通信协议层', target: 'MQTT' },
-        { source: 'MCP服务器', target: 'MCP工具生态' },
-        { source: '音频处理系统', target: 'AEC处理' },
-        { source: '音频处理系统', target: 'VAD检测' },
-        { source: '音频处理系统', target: '唤醒词检测' },
-        { source: '用户界面系统', target: 'PyQt5 GUI' },
-        { source: '用户界面系统', target: 'CLI界面' },
-        { source: 'IoT设备管理', target: 'Thing抽象' },
-        { source: 'IoT设备管理', target: '智能家居' }
+        { source: 'Application Core', target: 'MCP Server' },
+        { source: 'Application Core', target: 'Protocol Layer' },
+        { source: 'Application Core', target: 'Audio Processing System' },
+        { source: 'Application Core', target: 'UI System' },
+        { source: 'Application Core', target: 'IoT Device Management' },
+        { source: 'Protocol Layer', target: 'WebSocket' },
+        { source: 'Protocol Layer', target: 'MQTT' },
+        { source: 'MCP Server', target: 'MCP Tools Ecosystem' },
+        { source: 'Audio Processing System', target: 'AEC Processing' },
+        { source: 'Audio Processing System', target: 'VAD Detection' },
+        { source: 'Audio Processing System', target: 'Wakeword Detection' },
+        { source: 'UI System', target: 'PyQt5 GUI' },
+        { source: 'UI System', target: 'CLI Interface' },
+        { source: 'IoT Device Management', target: 'Thing Abstract' },
+        { source: 'IoT Device Management', target: 'Smart Home' }
       ],
       categories: [
         { 
-          name: '核心',
+          name: 'Core',
           itemStyle: {
             color: '#5470c6',
             borderColor: '#5470c6',
@@ -94,7 +94,7 @@ const createChartOption = (darkMode) => ({
           }
         },
         { 
-          name: '主要模块',
+          name: 'Main Modules',
           itemStyle: {
             color: '#93cc76',
             borderColor: '#93cc76',
@@ -102,7 +102,7 @@ const createChartOption = (darkMode) => ({
           }
         },
         { 
-          name: '子模块',
+          name: 'Submodules',
           itemStyle: {
             color: '#fac858',
             borderColor: '#fac858',
@@ -162,7 +162,7 @@ onMounted(() => {
   initChart();
 });
 
-// 监听主题切换
+// Watch theme switching
 watch(isDark, (newValue) => {
   if (chart) {
     chart.setOption(createChartOption(newValue));
@@ -184,4 +184,4 @@ watch(isDark, (newValue) => {
   margin-top: 16px;
   font-size: 14px;
 }
-</style> 
+</style>

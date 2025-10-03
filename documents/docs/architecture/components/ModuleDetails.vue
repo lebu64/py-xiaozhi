@@ -40,88 +40,88 @@ import { useData } from 'vitepress';
 
 const { isDark } = useData();
 
-// 模块详情
+// Module Details
 const modules = [
   {
     name: 'src/application.py',
     icon: CogIcon,
     features: [
-      '应用主类，单例模式管理全局状态',
-      '异步任务管理和状态机控制',
-      '设备状态(IDLE/CONNECTING/LISTENING/SPEAKING)',
-      '线程安全的命令队列处理'
+      'Application main class, singleton pattern manages global state',
+      'Asynchronous task management and state machine control',
+      'Device states (IDLE/CONNECTING/LISTENING/SPEAKING)',
+      'Thread-safe command queue processing'
     ]
   },
   {
     name: 'src/mcp/',
     icon: WrenchIcon,
     features: [
-      '基于JSON-RPC 2.0的MCP服务器',
-      '丰富的工具生态系统(系统、日历、地图等)',
-      '可扩展的插件架构',
-      '类型安全的参数验证'
+      'JSON-RPC 2.0 based MCP server',
+      'Rich tool ecosystem (system, calendar, maps, etc.)',
+      'Extensible plugin architecture',
+      'Type-safe parameter validation'
     ]
   },
   {
     name: 'src/protocols/',
     icon: ArrowsRightLeftIcon,
     features: [
-      '抽象协议接口设计',
-      'WebSocket和MQTT协议实现',
-      'TLS加密和自动重连机制',
-      '统一的通信抽象层'
+      'Abstract protocol interface design',
+      'WebSocket and MQTT protocol implementations',
+      'TLS encryption and automatic reconnection mechanism',
+      'Unified communication abstraction layer'
     ]
   },
   {
     name: 'src/audio_codecs/',
     icon: DocumentIcon,
     features: [
-      '基于Opus的实时音频编解码',
-      'WebRTC音频回声消除(AEC)处理器',
-      'SoXR高质量音频重采样',
-      '系统音频录制与环回处理',
-      '异步音频流处理',
-      '低延迟音频缓冲管理'
+      'Real-time audio codec based on Opus',
+      'WebRTC audio echo cancellation (AEC) processor',
+      'SoXR high-quality audio resampling',
+      'System audio recording and loopback processing',
+      'Asynchronous audio stream processing',
+      'Low-latency audio buffer management'
     ]
   },
   {
     name: 'src/audio_processing/',
     icon: SpeakerXMarkIcon,
     features: [
-      'AEC声学回声消除处理器',
-      '基于Sherpa-ONNX的语音活动检测(VAD)',
-      '多语言唤醒词检测',
-      '实时音频处理和回调机制'
+      'AEC acoustic echo cancellation processor',
+      'Sherpa-ONNX based voice activity detection (VAD)',
+      'Multi-language wake word detection',
+      'Real-time audio processing and callback mechanism'
     ]
   },
   {
     name: 'src/display/',
     icon: ComputerDesktopIcon,
     features: [
-      '策略模式的UI系统架构',
-      'PyQt5 GUI和CLI界面实现',
-      '异步界面更新',
-      '状态显示和用户交互'
+      'Strategy pattern UI system architecture',
+      'PyQt5 GUI and CLI interface implementations',
+      'Asynchronous interface updates',
+      'Status display and user interaction'
     ]
   },
   {
     name: 'src/iot/',
     icon: LightBulbIcon,
     features: [
-      '基于Thing抽象的IoT设备框架',
-      '统一设备管理和状态同步',
-      '动态设备发现',
-      '智能家居设备控制'
+      'Thing abstraction based IoT device framework',
+      'Unified device management and state synchronization',
+      'Dynamic device discovery',
+      'Smart home device control'
     ]
   },
   {
     name: 'src/utils/',
     icon: MapIcon,
     features: [
-      '配置管理和设备指纹',
-      '日志系统和资源查找',
-      '音量控制和通用工具',
-      '跨平台兼容性处理'
+      'Configuration management and device fingerprinting',
+      'Logging system and resource finding',
+      'Volume control and common utilities',
+      'Cross-platform compatibility handling'
     ]
   }
 ];
@@ -165,4 +165,4 @@ const moduleColors = [
 .feature-text {
   color: var(--vp-c-text-2);
 }
-</style> 
+</style>

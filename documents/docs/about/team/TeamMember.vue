@@ -38,7 +38,7 @@ function arrayify(value: string | string[]): string[] {
       :href="`https://github.com/sponsors/${member.socials.github}`"
       no-icon
     >
-      <VTIconHeart class="sponsor-icon" /> 赞助
+      <VTIconHeart class="sponsor-icon" /> Sponsor
     </VTLink>
 
     <div class="member-content">

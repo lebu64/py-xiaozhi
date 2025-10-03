@@ -40,24 +40,25 @@ shuffleMembers(membersPartnerData)
 <template>
   <div class="TeamPage">
     <TeamHero>
-      <template #title>团队成员</template>
+      <template #title>Team Members</template>
       <template #lead>
-        py-xiaozhi项目的开发和维护由社区人员负责，
-        以下是核心团队成员以及社区贡献者的部分信息。
+        The development and maintenance of the py-xiaozhi project is handled by community members.
+        Below is some information about core team members and community contributors.
       </template>
     </TeamHero>
 
     <TeamList :members="membersCoreData">
-      <template #title>核心团队成员</template>
+      <template #title>Core Team Members</template>
       <template #lead>
-        核心团队成员积极参与项目开发和维护，对py-xiaozhi项目做出了重大贡献。
+        Core team members actively participate in project development and maintenance,
+        making significant contributions to the py-xiaozhi project.
       </template>
     </TeamList>
 
     <TeamList :members="membersPartnerData">
-      <template #title>社区贡献者</template>
+      <template #title>Community Contributors</template>
       <template #lead>
-        感谢以下社区成员在项目初期提供的帮助和支持。
+        Thank you to the following community members for their help and support during the early stages of the project.
       </template>
     </TeamList>
   </div>

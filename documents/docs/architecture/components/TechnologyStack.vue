@@ -27,7 +27,7 @@ import {
   MusicalNoteIcon as MusicIcon
 } from '@heroicons/vue/24/solid';
 
-// 技术栈
+// Technology Stack
 const techStack = [
   {
     name: 'Python',
@@ -36,72 +36,72 @@ const techStack = [
   },
   {
     name: 'AsyncIO',
-    description: '异步编程框架',
+    description: 'Asynchronous Programming Framework',
     icon: ArrowPathIcon
   },
   {
     name: 'PyQt5',
-    description: 'GUI框架',
+    description: 'GUI Framework',
     icon: WindowIcon
   },
   {
     name: 'qasync',
-    description: 'Qt异步集成',
+    description: 'Qt Asynchronous Integration',
     icon: ArrowsUpDownIcon
   },
   {
     name: 'Sherpa-ONNX',
-    description: '语音识别引擎',
+    description: 'Speech Recognition Engine',
     icon: DocumentIcon
   },
   {
     name: 'WebRTC AEC',
-    description: 'WebRTC音频处理模块',
+    description: 'WebRTC Audio Processing Module',
     icon: MusicIcon
   },
   {
     name: 'OpusLib',
-    description: '音频编解码',
+    description: 'Audio Codec',
     icon: AudioIcon
   },
   {
     name: 'SoXR',
-    description: '高质量重采样',
+    description: 'High Quality Resampling',
     icon: SignalIcon
   },
   {
     name: 'SoundDevice',
-    description: '音频设备管理',
+    description: 'Audio Device Management',
     icon: AudioIcon
   },
   {
     name: 'WebSockets',
-    description: '实时通信协议',
+    description: 'Real-time Communication Protocol',
     icon: PuzzlePieceIcon
   },
   {
     name: 'MQTT',
-    description: 'IoT消息传输',
+    description: 'IoT Message Transport',
     icon: SignalIcon
   },
   {
     name: 'MCP Protocol',
-    description: '模型上下文协议',
+    description: 'Model Context Protocol',
     icon: PuzzlePieceIcon
   },
   {
     name: 'Cryptography',
-    description: '加密安全库',
+    description: 'Encryption Security Library',
     icon: DocumentIcon
   },
   {
-    name: 'Thing抽象',
-    description: 'IoT设备抽象',
+    name: 'Thing Abstract',
+    description: 'IoT Device Abstraction',
     icon: SignalIcon
   },
   {
     name: 'JSON-RPC',
-    description: '远程过程调用',
+    description: 'Remote Procedure Call',
     icon: DocumentIcon
   }
 ];
@@ -153,4 +153,4 @@ const techColors = [
   text-align: center;
   margin-top: 4px;
 }
-</style> 
+</style>

@@ -6,36 +6,36 @@ import {
   BoltIcon,
   ShareIcon
 } from '@heroicons/vue/24/solid';
-// 架构特点
+// Architecture Features
 const architectureFeatures = [
   {
-    title: '单例模式',
-    description: '应用核心采用线程安全的单例模式，保证全局唯一实例和状态一致性',
+    title: 'Singleton Pattern',
+    description: 'Application core uses thread-safe singleton pattern, ensuring global unique instance and state consistency',
     icon: CubeIcon
   },
   {
-    title: '异步架构',
-    description: '全面采用asyncio异步编程，支持高并发处理和实时音频流',
+    title: 'Asynchronous Architecture',
+    description: 'Comprehensive asyncio asynchronous programming, supporting high concurrency processing and real-time audio streams',
     icon: BoltIcon
   },
   {
-    title: '资源管理',
-    description: '中央化资源管理器，智能依赖跟踪和优雅清理机制',
+    title: 'Resource Management',
+    description: 'Centralized resource manager, intelligent dependency tracking and graceful cleanup mechanism',
     icon: ShareIcon
   },
   {
-    title: '状态机模式',
-    description: '设备状态管理采用状态机模式，清晰的状态转换和错误恢复',
+    title: 'State Machine Pattern',
+    description: 'Device state management uses state machine pattern, clear state transitions and error recovery',
     icon: ArrowsRightLeftIcon
   },
   {
-    title: '插件化生态',
-    description: 'MCP工具和IoT设备采用插件化设计，支持热插拔和动态扩展',
+    title: 'Plugin Ecosystem',
+    description: 'MCP tools and IoT devices use plugin design, supporting hot-plugging and dynamic expansion',
     icon: PuzzlePieceIcon
   },
   {
-    title: '跨平台兼容',
-    description: '支持Windows、macOS、Linux多平台，智能特性检测和优雅降级',
+    title: 'Cross-platform Compatibility',
+    description: 'Supports Windows, macOS, Linux multi-platform, intelligent feature detection and graceful degradation',
     icon: CubeIcon
   }
 ];
