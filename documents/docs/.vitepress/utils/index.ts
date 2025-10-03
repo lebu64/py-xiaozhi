@@ -11,7 +11,7 @@ export function getMdFilesAsync(rootDir: string) {
           const entryPath = path.join(currentDir, entry.name);
           
           if (entry.isDirectory()) {
-              traverse(entryPath); // 递归子目录[3](@ref)
+              traverse(entryPath); // Recursively traverse subdirectories[3](@ref)
           } else if (path.extname(entry.name).toLowerCase() === '.md') {
               const relativePath = path.relative(rootDir, entryPath);
               results.push(relativePath);

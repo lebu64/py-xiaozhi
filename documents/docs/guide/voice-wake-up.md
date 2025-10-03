@@ -158,12 +158,12 @@ Edit `config/config.json`:
 ### Currently Supported Wake Words
 
 ```
-1. 小爱同学    (x iǎo ài t óng x ué)
-2. 你好问问    (n ǐ h ǎo w èn w èn)
-3. 小艺小艺    (x iǎo y ì x iǎo y ì)
-4. 小米小米    (x iǎo m ǐ x iǎo m ǐ)
-5. 你好小智 (n ǐ h ǎo x iǎo zh ì)
-6. 贾维斯 (j iā w éi s ī)
+1. Xiao Ai Tong Xue    (x iǎo ài t óng x ué)
+2. Ni Hao Wen Wen    (n ǐ h ǎo w èn w èn)
+3. Xiao Yi Xiao Yi    (x iǎo y ì x iǎo y ì)
+4. Xiao Mi Xiao Mi    (x iǎo m ǐ x iǎo m ǐ)
+5. Ni Hao Xiao Zhi (n ǐ h ǎo x iǎo zh ì)
+6. Jarvis (j iā w éi s ī)
 ```
 
 ### Add New Wake Words
@@ -174,10 +174,10 @@ Edit `models/keywords.txt`, add in format:
 
 ```
 # Format: pinyin decomposition @Chinese original text
-x iǎo zh ì @小智
-n ǐ h ǎo x iǎo zh ì @你好小智
-j iā w éi s ī @贾维斯
-k āi sh ǐ g ōng z uò @开始工作
+x iǎo zh ì @Xiao Zhi
+n ǐ h ǎo x iǎo zh ì @Ni Hao Xiao Zhi
+j iā w éi s ī @Jarvis
+k āi sh ǐ g ōng z uò @Kai Shi Gong Zuo
 ```
 
 #### Method 2: Use Pinyin Conversion Tool
@@ -192,7 +192,7 @@ def generate_keyword_line(text):
     return f'{pinyin_str} @{text}'
 
 # Generate new wake words
-wake_words = ['小助手', '开始工作', '星期五']
+wake_words = ['Xiao Zhu Shou', 'Kai Shi Gong Zuo', 'Xing Qi Wu']
 for word in wake_words:
     print(generate_keyword_line(word))
 ```
@@ -209,19 +209,19 @@ for word in wake_words:
 #### Example Good Wake Words
 
 ```
-- 你好小智    # 4 characters, unique, clear
-- 贾维斯      # 3 characters, unique, tech feel
-- 开始工作    # 4 characters, clear intent
-- 小助手      # 3 characters, simple and easy to remember
+- Ni Hao Xiao Zhi    # 4 characters, unique, clear
+- Jarvis             # 3 characters, unique, tech feel
+- Kai Shi Gong Zuo   # 4 characters, clear intent
+- Xiao Zhu Shou      # 3 characters, simple and easy to remember
 ```
 
 #### Avoid Using
 
 ```
-- 嗯         # Too short, easy to trigger accidentally
-- 你好       # Too common
-- 请帮我做一个计划 # Too long
-- 谢谢       # Daily language
+- En                # Too short, easy to trigger accidentally
+- Ni Hao            # Too common
+- Qing Bang Wo Zuo Yi Ge Ji Hua # Too long
+- Xie Xie           # Daily language
 ```
 
 ## Usage Methods

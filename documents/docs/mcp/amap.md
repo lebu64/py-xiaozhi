@@ -1,263 +1,249 @@
-# 高德地图工具 (Amap Tools)
+# Amap Tools
 
-高德地图工具是基于高德地图 Web API 的 MCP 工具集，提供了丰富的地理位置服务功能。
+Amap Tools is an MCP toolset based on Amap Web API, providing rich geographic location service functionality.
 
-## 自然语言使用方式
+## Natural Language Usage Methods
 
-### 路线规划
-- "从云升科学园到科学城地铁站怎么走"
-- "去天河城的路线"
-- "开车从A到B要多久"
+### Route Planning
+- "How to get from Yunsheng Science Park to Science City Metro Station"
+- "Route to Tianhe City"
+- "How long does it take to drive from A to B"
 
-### 最近地点查询
-- "最近的奶茶店怎么走"
-- "最近的餐厅在哪里"
-- "最近的地铁站"
-- "最近的银行"
+### Nearest Location Query
+- "How to get to the nearest milk tea shop"
+- "Where is the nearest restaurant"
+- "Nearest metro station"
+- "Nearest bank"
 
-### 附近地点搜索
-- "附近有哪些奶茶店"
-- "附近的餐厅"
-- "周边的超市"
-- "附近2公里内的银行"
+### Nearby Location Search
+- "What milk tea shops are nearby"
+- "Nearby restaurants"
+- "Surrounding supermarkets"
+- "Banks within 2 kilometers nearby"
 
-### 智能导航
-- "去天河城"
-- "导航到广州塔"
-- "怎么去白云机场"
+### Smart Navigation
+- "Go to Tianhe City"
+- "Navigate to Canton Tower"
+- "How to get to Baiyun Airport"
 
-### 出行方式对比
-- "从A到B，开车和坐地铁哪个快"
-- "比较一下去机场的各种方式"
-- "哪种方式最快"
+### Travel Mode Comparison
+- "From A to B, which is faster, driving or taking metro"
+- "Compare various ways to get to the airport"
+- "Which method is the fastest"
 
-## MCP 工具介绍
+## MCP Tool Introduction
 
-### 智能工具（推荐使用）
+### Smart Tools (Recommended Use)
 
-#### 1. route_planning - 智能路线规划
-支持自然语言地址输入的路线规划，自动处理地址转换和坐标解析。
+#### 1. route_planning - Smart Route Planning
+Supports natural language address input for route planning, automatically handles address conversion and coordinate parsing.
 
-**参数:**
-- `origin` (必需): 起点地址名称
-- `destination` (必需): 终点地址名称
-- `city` (可选): 所在城市，默认广州
-- `travel_mode` (可选): 出行方式，walking(步行)、driving(驾车)、bicycling(骑行)、transit(公交)，默认步行
+**Parameters:**
+- `origin` (required): Starting point address name
+- `destination` (required): Destination address name
+- `city` (optional): City location, default Guangzhou
+- `travel_mode` (optional): Travel mode, walking (walking), driving (driving), bicycling (cycling), transit (public transport), default walking
 
-#### 2. find_nearest - 最近地点查找
-找到最近的某类地点并提供详细的步行路线。
+#### 2. find_nearest - Find Nearest Location
+Find the nearest location of a certain type and provide detailed walking route.
 
-**参数:**
-- `keywords` (必需): 搜索关键词，如"奶茶店"、"餐厅"、"地铁站"、"银行"
-- `radius` (可选): 搜索半径（米），默认5000米
-- `user_location` (可选): 用户位置，不提供则自动定位
+**Parameters:**
+- `keywords` (required): Search keywords, such as "milk tea shop", "restaurant", "metro station", "bank"
+- `radius` (optional): Search radius (meters), default 5000 meters
+- `user_location` (optional): User location, if not provided, automatically locates
 
-#### 3. find_nearby - 附近地点搜索
-搜索附近的多个地点，按距离排序展示。
+#### 3. find_nearby - Nearby Location Search
+Search for multiple nearby locations, displayed sorted by distance.
 
-**参数:**
-- `keywords` (必需): 搜索关键词，如"奶茶店"、"餐厅"、"超市"
-- `radius` (可选): 搜索半径（米），默认2000米
-- `user_location` (可选): 用户位置，不提供则自动定位
+**Parameters:**
+- `keywords` (required): Search keywords, such as "milk tea shop", "restaurant", "supermarket"
+- `radius` (optional): Search radius (meters), default 2000 meters
+- `user_location` (optional): User location, if not provided, automatically locates
 
-#### 4. navigation - 智能导航
-提供到目的地的多种出行方式对比和推荐。
+#### 4. navigation - Smart Navigation
+Provide comparison and recommendations for multiple travel modes to destination.
 
-**参数:**
-- `destination` (必需): 目的地名称
-- `city` (可选): 所在城市，默认广州
-- `user_location` (可选): 用户位置，不提供则自动定位
+**Parameters:**
+- `destination` (required): Destination name
+- `city` (optional): City location, default Guangzhou
+- `user_location` (optional): User location, if not provided, automatically locates
 
-#### 5. get_location - 当前位置获取
-基于IP地址的智能定位服务。
+#### 5. get_location - Current Location Acquisition
+Smart location service based on IP address.
 
-**参数:**
-- `user_ip` (可选): 用户IP地址，不提供则自动获取
+**Parameters:**
+- `user_ip` (optional): User IP address, if not provided, automatically obtains
 
-#### 6. compare_routes - 路线对比
-比较不同出行方式的时间、距离和适用性。
+#### 6. compare_routes - Route Comparison
+Compare time, distance, and applicability of different travel modes.
 
-**参数:**
-- `origin` (必需): 起点地址名称
-- `destination` (必需): 终点地址名称
-- `city` (可选): 所在城市，默认广州
+**Parameters:**
+- `origin` (required): Starting point address name
+- `destination` (required): Destination address name
+- `city` (optional): City location, default Guangzhou
 
-### 基础工具（二次开发使用）
+### Basic Tools (For Secondary Development)
 
-#### 地理编码工具
-- `maps_geo` - 地址转坐标
-- `maps_regeocode` - 坐标转地址
-- `maps_ip_location` - IP定位
+#### Geocoding Tools
+- `maps_geo` - Address to coordinates
+- `maps_regeocode` - Coordinates to address
+- `maps_ip_location` - IP location
 
-#### 路径规划工具
-- `maps_direction_walking` - 步行路径规划
-- `maps_direction_driving` - 驾车路径规划
-- `maps_bicycling` - 骑行路径规划
-- `maps_direction_transit_integrated` - 公交路径规划
+#### Route Planning Tools
+- `maps_direction_walking` - Walking route planning
+- `maps_direction_driving` - Driving route planning
+- `maps_bicycling` - Cycling route planning
+- `maps_direction_transit_integrated` - Public transport route planning
 
-#### 搜索工具
-- `maps_text_search` - 关键词搜索
-- `maps_around_search` - 周边搜索
-- `maps_search_detail` - POI详情查询
+#### Search Tools
+- `maps_text_search` - Keyword search
+- `maps_around_search` - Surrounding search
+- `maps_search_detail` - POI detail query
 
-#### 其他工具
-- `maps_weather` - 天气查询
-- `maps_distance` - 距离测量
+#### Other Tools
+- `maps_weather` - Weather query
+- `maps_distance` - Distance measurement
 
-## 使用示例
+## Usage Examples
 
-### 智能工具示例
+### Smart Tool Examples
 
 ```python
-# 智能路线规划
+# Smart route planning
 result = await mcp_server.call_tool("route_planning", {
-    "origin": "云升科学园",
-    "destination": "科学城地铁站",
+    "origin": "Yunsheng Science Park",
+    "destination": "Science City Metro Station",
     "travel_mode": "walking"
 })
 
-# 最近地点查找
+# Find nearest location
 result = await mcp_server.call_tool("find_nearest", {
-    "keywords": "奶茶店",
+    "keywords": "milk tea shop",
     "radius": "5000"
 })
 
-# 附近地点搜索
+# Nearby location search
 result = await mcp_server.call_tool("find_nearby", {
-    "keywords": "餐厅",
+    "keywords": "restaurant",
     "radius": "2000"
 })
 ```
 
-### 基础工具示例
+### Basic Tool Examples
 
 ```python
-# 地址转坐标
+# Address to coordinates
 result = await mcp_server.call_tool("maps_geo", {
-    "address": "北京市天安门广场",
-    "city": "北京"
+    "address": "Tiananmen Square, Beijing",
+    "city": "Beijing"
 })
 
-# 步行路径规划
+# Walking route planning
 result = await mcp_server.call_tool("maps_direction_walking", {
     "origin": "116.397428,39.90923",
-    "destination": "116.390813,39.904368"
+    "destination": "116.407428,39.91923"
 })
 ```
 
-## 二次开发说明
+## Secondary Development Instructions
 
-### 工具架构
+### Tool Architecture
 
-高德地图工具采用分层架构设计：
+Amap Tools adopts layered architecture design:
 
-#### 1. 智能工具层 (MCP 适配)
-- **AmapToolsManager**: 适配 MCP 服务器的管理器
-- **智能工具注册**: 自动注册用户友好的智能工具
-- **参数验证**: 完整的参数类型和格式验证
-- **结果格式化**: 用户友好的结果展示
+#### 1. Smart Tool Layer (MCP Adaptation)
+- **AmapToolsManager**: Manager adapted for MCP server
+- **Smart Tool Registration**: Automatically registers user-friendly smart tools
+- **Parameter Validation**: Complete parameter type and format validation
+- **Result Formatting**: User-friendly result display
 
-#### 2. 业务逻辑层 (AmapManager)
-- **智能路线规划**: 支持自然语言地址输入
-- **自动定位**: 多策略IP定位和城市识别
-- **组合功能**: 将多个API调用组合成高级功能
-- **错误处理**: 完善的异常处理和容错机制
+#### 2. Business Logic Layer (AmapManager)
+- **Smart Route Planning**: Supports natural language address input
+- **Automatic Location**: Multi-strategy IP location and city recognition
+- **Combined Functions**: Combines multiple API calls into advanced functions
+- **Error Handling**: Comprehensive exception handling and fault tolerance mechanism
 
-#### 3. API 客户端层 (AmapClient)
-- **HTTP 客户端**: 基于 aiohttp 的异步HTTP客户端
-- **API 封装**: 所有高德地图API的完整封装
-- **响应解析**: 自动解析API响应并转换为数据模型
-- **错误处理**: API级别的错误处理和重试
+#### 3. API Client Layer (AmapClient)
+- **HTTP Client**: Asynchronous HTTP client based on aiohttp
+- **API Encapsulation**: Complete encapsulation of all Amap APIs
+- **Response Parsing**: Automatically parses API responses and converts to data models
+- **Error Handling**: API-level error handling and retry
 
-#### 4. 数据模型层 (Models)
-- **结构化数据**: 使用 dataclass 定义的数据结构
-- **类型安全**: 完整的类型注解和验证
-- **格式转换**: 坐标、地址等格式的自动转换
-- **数据一致性**: 统一的数据格式和命名规范
+#### 4. Data Model Layer (Models)
+- **Structured Data**: Data structures defined using dataclass
+- **Type Safety**: Complete type annotations and validation
+- **Format Conversion**: Automatic conversion of coordinates, addresses and other formats
+- **Data Consistency**: Unified data format and naming conventions
 
-### 智能功能特性
+### Smart Function Features
 
-#### 自动定位策略
-1. 优先使用高德API自动IP识别
-2. 如果失败，尝试第三方IP服务
-3. 验证定位结果的有效性
-4. 回退到城市中心坐标
+#### Automatic Location Strategy
+1. Priority use of Amap API automatic IP recognition
+2. If failed, try third-party IP service
+3. Verify validity of location results
+4. Fallback to city center coordinates
 
-#### 地址智能解析
-- 支持自然语言地址输入: "天安门广场"
-- 支持坐标格式: "116.397428,39.90923"
-- 支持复合地址: "北京市东城区天安门广场1号"
+#### Address Smart Parsing
+- Supports natural language address input: "Tiananmen Square"
+- Supports coordinate format: "116.397428,39.90923"
+- Supports composite addresses: "No. 1 Tiananmen Square, Dongcheng District, Beijing"
 
-#### 结果智能格式化
-- 用户友好的输出格式
-- 多种出行方式对比展示
-- 详细的步行路线指引
+#### Result Smart Formatting
+- User-friendly output format
+- Comparison display of multiple travel modes
+- Detailed walking route guidance
 
-### 配置说明
+### Configuration Instructions
 
-#### API 密钥配置
-高德地图工具需要配置 API 密钥才能正常使用。
+#### API Key Configuration
+Amap Tools requires API key configuration to function properly.
 
-**获取 API 密钥:**
-1. 访问 [高德开放平台](https://lbs.amap.com/)
-2. 注册开发者账号
-3. 创建应用，获取 API Key
+**Obtain API Key:**
+1. Visit [Amap Open Platform](https://lbs.amap.com/)
+2. Register developer account
+3. Create application, obtain API Key
 
-**配置方式:**
-目前 API 密钥在 `src/mcp/tools/amap/__init__.py` 中硬编码：
+**Configuration Method:**
+Currently API key is hardcoded in `src/mcp/tools/amap/__init__.py`:
 
-```python
-AMAP_API_KEY = "your_api_key_here"
-```
+**Recommended Configuration Method:**
+Configure API key in `config/config.json`:
 
-**建议配置方式:**
-将 API 密钥配置到 `config/config.json` 中：
+### Extension Development
 
-```json
-{
-  "amap": {
-    "api_key": "your_api_key_here"
-  }
-}
-```
+#### Adding New Smart Tools
+1. Implement business logic in `AmapManager`
+2. Register new tool in `AmapToolsManager`
+3. Add tool definition in `AmapTools`
+4. Update test cases
 
-### 扩展开发
+#### Adding New Basic Tools
+1. Encapsulate API call in `AmapClient`
+2. Implement business logic in `AmapManager`
+3. Add tool definition in `AmapTools`
+4. Update data models (if needed)
 
-#### 添加新的智能工具
-1. 在 `AmapManager` 中实现业务逻辑
-2. 在 `AmapToolsManager` 中注册新工具
-3. 在 `AmapTools` 中添加工具定义
-4. 更新测试用例
-
-#### 添加新的基础工具
-1. 在 `AmapClient` 中封装API调用
-2. 在 `AmapManager` 中实现业务逻辑
-3. 在 `AmapTools` 中添加工具定义
-4. 更新数据模型（如需要）
-
-### 数据结构
+### Data Structures
 
 ```python
-@dataclass
 class Location:
-    longitude: float  # 经度
-    latitude: float   # 纬度
+    longitude: float  # Longitude
+    latitude: float   # Latitude
 
-@dataclass
 class POI:
     id: str              # POI ID
-    name: str            # 名称
-    address: str         # 地址
-    location: Location   # 坐标
-    type_code: str       # 类型代码
+    name: str            # Name
+    address: str         # Address
+    location: Location   # Coordinates
+    type_code: str       # Type code
 ```
 
-### 最佳实践
+### Best Practices
 
-1. **优先使用智能工具**: 自动处理复杂逻辑，用户友好
-2. **合理设置参数**: 指定城市、半径等参数提高精度
-3. **错误处理**: 处理网络异常和API错误
-4. **缓存策略**: 对频繁查询的结果进行缓存
-5. **异步调用**: 使用异步方式提高性能
+1. **Prioritize Smart Tools**: Automatically handles complex logic, user-friendly
+2. **Reasonable Parameter Settings**: Specify city, radius and other parameters to improve accuracy
+3. **Error Handling**: Handle network exceptions and API errors
+4. **Cache Strategy**: Cache results of frequent queries
+5. **Asynchronous Calls**: Use asynchronous methods to improve performance
 
-通过高德地图工具，您可以轻松地为应用添加强大的地理位置服务功能，提供更好的用户体验。
+With Amap Tools, you can easily add powerful geographic location service functionality to your applications, providing better user experience.

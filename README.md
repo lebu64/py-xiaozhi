@@ -126,7 +126,7 @@ py-xiaozhi is a Python-based Xiaozhi voice client, designed to learn coding and 
 
 ## Read This First
 
-- Carefully read [项目文档](https://huangjunsen0406.github.io/py-xiaozhi/) for startup tutorials and file descriptions
+- Carefully read [Project Documentation](https://huangjunsen0406.github.io/py-xiaozhi/) for startup tutorials and file descriptions
 - The main branch has the latest code; manually reinstall pip dependencies after each update to ensure you have new dependencies
 
 [Zero to Xiaozhi Client (Video Tutorial)](https://www.bilibili.com/video/BV1dWQhYEEmq/?vd_source=2065ec11f7577e7107a55bbdc3d12fce)

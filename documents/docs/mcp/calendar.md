@@ -1,372 +1,414 @@
-# 日程管理工具 (Calendar Tools)
+# Calendar Tools
 
-日程管理工具是一个功能完善的 MCP 日程管理工具集，提供了日程创建、查询、更新、删除等全方位的日程管理功能。
+Calendar Tools is a comprehensive MCP calendar management toolset that provides full-featured calendar management functions including event creation, query, update, deletion, and more.
 
-### 常见使用场景
+### Common Usage Scenarios
 
-**创建日程:**
-- "明天上午10点帮我安排一个会议日程"
-- "下周二下午3点提醒我开会"
-- "每天早上9点设置一个站立会议"
-- "2025年7月15日14:30安排一个重要会议，到16:00结束"
+**Create Events:**
+- "Schedule a meeting for me tomorrow at 10 AM"
+- "Remind me to attend a meeting next Tuesday at 3 PM"
+- "Set up a stand-up meeting every morning at 9 AM"
+- "Schedule an important meeting on July 15, 2025 at 14:30, ending at 16:00"
 
-**查询日程:**
-- "今天有什么安排"
-- "明天的日程"
-- "这周的会议安排"
-- "下个月的所有日程"
-- "最近有什么即将到来的事情"
+**Query Events:**
+- "What's scheduled for today"
+- "Tomorrow's schedule"
+- "This week's meeting arrangements"
+- "All schedules for next month"
+- "What upcoming events are there recently"
 
-**修改日程:**
-- "把明天的会议改到下午2点"
-- "会议描述改为团队讨论"
-- "把会议时间延长到3小时"
+**Modify Events:**
+- "Change tomorrow's meeting to 2 PM"
+- "Change meeting description to team discussion"
+- "Extend meeting time to 3 hours"
 
-**删除日程:**
-- "取消明天的会议"
-- "删除今天所有的休息提醒"
-- "清空本周的所有日程"
+**Delete Events:**
+- "Cancel tomorrow's meeting"
+- "Delete all rest reminders for today"
+- "Clear all schedules for this week"
 
-**分类管理:**
-- "查看所有工作类型的日程"
-- "创建一个会议分类的日程"
-- "有哪些日程分类"
+**Category Management:**
+- "View all work-type schedules"
+- "Create a meeting category schedule"
+- "What schedule categories are there"
 
-### 使用提示
+### Usage Tips
 
-1. **自然描述时间**: 支持"明天"、"下周二"、"今天下午"等自然语言时间表达
-2. **智能时长**: 如果不指定结束时间，系统会根据日程类型智能设置合适的时长
-3. **分类管理**: 可以为日程设置分类，如"工作"、"会议"、"休息"等
-4. **提醒功能**: 可以设置提前多少分钟提醒，默认15分钟
-5. **批量操作**: 支持批量查询和删除日程
+1. **Natural Time Description**: Supports natural language time expressions like "tomorrow", "next Tuesday", "this afternoon"
+2. **Smart Duration**: If end time is not specified, system intelligently sets appropriate duration based on event type
+3. **Category Management**: Can set categories for events, such as "work", "meeting", "rest", etc.
+4. **Reminder Function**: Can set how many minutes in advance to remind, default 15 minutes
+5. **Batch Operations**: Supports batch query and deletion of events
 
-AI 助手会根据您的需求自动选择合适的日程管理工具，为您提供便捷的日程管理服务。
+AI assistant will automatically select appropriate calendar management tools based on your needs, providing convenient calendar management services.
 
-## 功能概览
+## Feature Overview
 
-### 日程管理核心功能
-- **日程创建**: 创建带有时间、描述、分类的日程事件
-- **日程查询**: 按日期、分类、时间范围查询日程
-- **日程更新**: 修改日程的标题、时间、描述等信息
-- **日程删除**: 删除单个或批量删除日程事件
+### Core Calendar Management Functions
+- **Event Creation**: Create calendar events with time, description, category
+- **Event Query**: Query events by date, category, time range
+- **Event Update**: Modify event title, time, description and other information
+- **Event Deletion**: Delete single or batch delete calendar events
 
-### 时间管理功能
-- **智能时长**: 根据日程类型自动设置合适的时长
-- **即将到来**: 查询未来指定时间内的日程
-- **提醒设置**: 可配置提前提醒时间
-- **时间冲突检测**: 防止时间冲突的日程创建
+### Time Management Functions
+- **Smart Duration**: Automatically sets appropriate duration based on event type
+- **Upcoming Events**: Query events within specified future time
+- **Reminder Settings**: Configurable advance reminder time
+- **Time Conflict Detection**: Prevents creation of conflicting time events
 
-### 分类管理
-- **分类统计**: 查看所有使用过的日程分类
-- **按分类查询**: 根据分类筛选日程
-- **智能分类**: 系统自动为常见活动分配合适的分类
+### Category Management
+- **Category Statistics**: View all used calendar categories
+- **Query by Category**: Filter events by category
+- **Smart Categorization**: System automatically assigns appropriate categories for common activities
 
-## 工具列表
+## Tool List
 
-### 1. 日程创建工具
+### 1. Event Creation Tools
 
-#### create_event - 创建日程事件
-创建一个新的日程事件。
+#### create_event - Create Calendar Event
+Create a new calendar event.
 
-**参数:**
-- `title` (必需): 日程标题
-- `start_time` (必需): 开始时间，ISO格式 "2025-07-09T10:00:00"
-- `end_time` (可选): 结束时间，不提供则智能设置
-- `description` (可选): 日程描述
-- `category` (可选): 日程分类，默认为"默认"
-- `reminder_minutes` (可选): 提前提醒分钟数，默认15分钟
+**Parameters:**
+- `title` (required): Event title
+- `start_time` (required): Start time, ISO format "2025-07-09T10:00:00"
+- `end_time` (optional): End time, if not provided, intelligently set
+- `description` (optional): Event description
+- `category` (optional): Event category, default "default"
+- `reminder_minutes` (optional): Advance reminder minutes, default 15 minutes
 
-**使用场景:**
-- 安排会议
-- 设置提醒
-- 创建工作任务
-- 安排个人活动
+**Usage Scenarios:**
+- Schedule meetings
+- Set reminders
+- Create work tasks
+- Arrange personal activities
 
-### 2. 日程查询工具
+### 2. Event Query Tools
 
-#### get_events_by_date - 按日期查询日程
-查询指定日期范围内的日程事件。
+#### get_events_by_date - Query Events by Date
+Query calendar events within specified date range.
 
-**参数:**
-- `date_type` (可选): 查询类型，支持 "today"、"tomorrow"、"week"、"month"
-- `category` (可选): 按分类筛选
-- `start_date` (可选): 自定义开始日期
-- `end_date` (可选): 自定义结束日期
+**Parameters:**
+- `date_type` (optional): Query type, supports "today", "tomorrow", "week", "month"
+- `category` (optional): Filter by category
+- `start_date` (optional): Custom start date
+- `end_date` (optional): Custom end date
 
-**使用场景:**
-- 查看今天的安排
-- 查看本周日程
-- 按分类查看日程
-- 自定义时间范围查询
+**Usage Scenarios:**
+- View today's arrangements
+- View this week's schedule
+- View schedules by category
+- Custom time range query
 
-#### get_upcoming_events - 获取即将到来的日程
-查询未来指定时间内即将开始的日程。
+#### get_upcoming_events - Get Upcoming Events
+Query events that will start within specified future time.
 
-**参数:**
-- `hours` (可选): 查询未来多少小时内的日程，默认24小时
+**Parameters:**
+- `hours` (optional): Query events within how many hours in the future, default 24 hours
 
-**使用场景:**
-- 查看接下来的安排
-- 日程提醒
-- 时间规划
+**Usage Scenarios:**
+- View upcoming arrangements
+- Event reminders
+- Time planning
 
-### 3. 日程更新工具
+### 3. Event Update Tools
 
-#### update_event - 更新日程事件
-修改已存在的日程事件信息。
+#### update_event - Update Calendar Event
+Modify existing calendar event information.
 
-**参数:**
-- `event_id` (必需): 日程事件ID
-- `title` (可选): 新的日程标题
-- `start_time` (可选): 新的开始时间
-- `end_time` (可选): 新的结束时间
-- `description` (可选): 新的日程描述
-- `category` (可选): 新的日程分类
-- `reminder_minutes` (可选): 新的提醒时间
+**Parameters:**
+- `event_id` (required): Calendar event ID
+- `title` (optional): New event title
+- `start_time` (optional): New start time
+- `end_time` (optional): New end time
+- `description` (optional): New event description
+- `category` (optional): New event category
+- `reminder_minutes` (optional): New reminder time
 
-**使用场景:**
-- 修改会议时间
-- 更新日程描述
-- 调整提醒时间
-- 更改日程分类
+**Usage Scenarios:**
+- Modify meeting time
+- Update event description
+- Adjust reminder time
+- Change event category
 
-### 4. 日程删除工具
+### 4. Event Deletion Tools
 
-#### delete_event - 删除日程事件
-删除指定的日程事件。
+#### delete_event - Delete Calendar Event
+Delete specified calendar event.
 
-**参数:**
-- `event_id` (必需): 要删除的日程事件ID
+**Parameters:**
+- `event_id` (required): Calendar event ID to delete
 
-**使用场景:**
-- 取消会议
-- 删除过期日程
-- 清理不需要的事件
+**Usage Scenarios:**
+- Cancel meetings
+- Delete expired events
+- Clean up unnecessary events
 
-#### delete_events_batch - 批量删除日程
-批量删除符合条件的日程事件。
+#### delete_events_batch - Batch Delete Events
+Batch delete events that meet conditions.
 
-**参数:**
-- `date_type` (可选): 删除类型，支持 "today"、"tomorrow"、"week"、"month"
-- `start_date` (可选): 自定义开始日期
-- `end_date` (可选): 自定义结束日期
-- `category` (可选): 按分类删除
-- `delete_all` (可选): 是否删除所有日程
+**Parameters:**
+- `date_type` (optional): Delete type, supports "today", "tomorrow", "week", "month"
+- `start_date` (optional): Custom start date
+- `end_date` (optional): Custom end date
+- `category` (optional): Delete by category
+- `delete_all` (optional): Whether to delete all events
 
-**使用场景:**
-- 清空某天的日程
-- 删除某分类的所有日程
-- 批量清理过期日程
+**Usage Scenarios:**
+- Clear events for a specific day
+- Delete all events of a category
+- Batch clean up expired events
 
-### 5. 分类管理工具
+### 5. Category Management Tools
 
-#### get_categories - 获取日程分类
-获取所有已使用的日程分类。
+#### get_categories - Get Calendar Categories
+Get all used calendar categories.
 
-**参数:**
-无
+**Parameters:**
+None
 
-**使用场景:**
-- 查看所有分类
-- 分类统计
-- 分类管理
+**Usage Scenarios:**
+- View all categories
+- Category statistics
+- Category management
 
-## 使用示例
+## Usage Examples
 
-### 日程创建示例
+### Event Creation Examples
 
 ```python
-# 创建简单日程
+# Create simple event
 result = await mcp_server.call_tool("create_event", {
-    "title": "团队会议",
-    "start_time": "2025-07-15T14:00:00",
-    "end_time": "2025-07-15T15:00:00",
-    "description": "讨论项目进展",
-    "category": "会议"
+    "title": "Team Meeting",
+    "start_time": "2025-07-10T10:00:00",
+    "description": "Weekly team sync meeting",
+    "category": "work"
 })
 
-# 创建带智能时长的日程
+# Create event with end time
 result = await mcp_server.call_tool("create_event", {
-    "title": "站立会议",
-    "start_time": "2025-07-15T09:00:00",
-    "category": "会议",
-    "reminder_minutes": 10
+    "title": "Project Review",
+    "start_time": "2025-07-11T14:00:00",
+    "end_time": "2025-07-11T16:00:00",
+    "description": "Monthly project review meeting",
+    "category": "meeting",
+    "reminder_minutes": 30
+})
+
+# Create personal reminder
+result = await mcp_server.call_tool("create_event", {
+    "title": "Doctor Appointment",
+    "start_time": "2025-07-12T09:30:00",
+    "description": "Annual health checkup",
+    "category": "personal"
 })
 ```
 
-### 日程查询示例
+### Event Query Examples
 
 ```python
-# 查询今天的日程
+# Query today's events
 result = await mcp_server.call_tool("get_events_by_date", {
     "date_type": "today"
 })
 
-# 查询本周的会议
+# Query this week's work events
 result = await mcp_server.call_tool("get_events_by_date", {
     "date_type": "week",
-    "category": "会议"
+    "category": "work"
 })
 
-# 查询未来12小时的日程
+# Query upcoming events in next 12 hours
 result = await mcp_server.call_tool("get_upcoming_events", {
     "hours": 12
 })
 
-# 自定义时间范围查询
+# Custom date range query
 result = await mcp_server.call_tool("get_events_by_date", {
-    "start_date": "2025-01-01T00:00:00",
-    "end_date": "2025-01-31T23:59:59"
+    "start_date": "2025-07-10",
+    "end_date": "2025-07-15"
 })
 ```
 
-### 日程更新示例
+### Event Update Examples
 
 ```python
-# 更新日程时间
+# Update event time
 result = await mcp_server.call_tool("update_event", {
-    "event_id": "event-123",
-    "start_time": "2025-07-15T15:00:00",
-    "end_time": "2025-07-15T16:00:00"
+    "event_id": "event_123",
+    "start_time": "2025-07-10T11:00:00",
+    "end_time": "2025-07-10T12:00:00"
 })
 
-# 更新日程描述
+# Update event description
 result = await mcp_server.call_tool("update_event", {
-    "event_id": "event-123",
-    "description": "更新的会议描述",
-    "reminder_minutes": 30
+    "event_id": "event_123",
+    "description": "Updated: Team sync with new agenda"
+})
+
+# Change event category
+result = await mcp_server.call_tool("update_event", {
+    "event_id": "event_123",
+    "category": "important"
 })
 ```
 
-### 日程删除示例
+### Event Deletion Examples
 
 ```python
-# 删除单个日程
+# Delete single event
 result = await mcp_server.call_tool("delete_event", {
-    "event_id": "event-123"
+    "event_id": "event_123"
 })
 
-# 删除今天所有日程
+# Delete today's events
 result = await mcp_server.call_tool("delete_events_batch", {
     "date_type": "today"
 })
 
-# 删除特定分类的日程
+# Delete all work category events
 result = await mcp_server.call_tool("delete_events_batch", {
-    "category": "休息",
-    "date_type": "week"
+    "category": "work"
+})
+
+# Delete all events
+result = await mcp_server.call_tool("delete_events_batch", {
+    "delete_all": true
 })
 ```
 
-### 分类管理示例
+### Category Management Examples
 
 ```python
-# 获取所有分类
+# Get all categories
 result = await mcp_server.call_tool("get_categories", {})
 ```
 
-## 数据结构
+## Data Structures
 
-### 日程事件 (CalendarEvent)
+### Calendar Event (CalendarEvent)
 ```python
-@dataclass
-class CalendarEvent:
-    id: str                    # 事件ID
-    title: str                 # 日程标题
-    start_time: str           # 开始时间（ISO格式）
-    end_time: str             # 结束时间（ISO格式）
-    description: str          # 日程描述
-    category: str             # 日程分类
-    reminder_minutes: int     # 提醒时间（分钟）
-    reminder_time: str        # 提醒时间（ISO格式）
-    reminder_sent: bool       # 是否已发送提醒
-    created_at: str           # 创建时间
-    updated_at: str           # 更新时间
+{
+    "id": "event_123",
+    "title": "Team Meeting",
+    "start_time": "2025-07-10T10:00:00",
+    "end_time": "2025-07-10T11:00:00",
+    "description": "Weekly team sync meeting",
+    "category": "work",
+    "reminder_minutes": 15,
+    "created_at": "2025-07-09T14:30:00Z",
+    "updated_at": "2025-07-09T14:30:00Z"
+}
 ```
 
-### 查询结果格式
+### Event Query Response (EventsResponse)
 ```python
 {
     "success": true,
-    "date_type": "today",
+    "date_range": {
+        "start": "2025-07-10",
+        "end": "2025-07-10"
+    },
     "total_events": 3,
     "events": [
         {
-            "id": "event-123",
-            "title": "团队会议",
-            "start_time": "2025-07-15T14:00:00",
-            "end_time": "2025-07-15T15:00:00",
-            "description": "讨论项目进展",
-            "category": "会议",
-            "display_time": "01/15 14:00 - 15:00",
-            "reminder_minutes": 15
+            "id": "event_123",
+            "title": "Team Meeting",
+            "start_time": "2025-07-10T10:00:00",
+            "end_time": "2025-07-10T11:00:00",
+            "description": "Weekly team sync meeting",
+            "category": "work"
         }
     ]
 }
 ```
 
-## 智能功能
+### Category Response (CategoriesResponse)
+```python
+{
+    "success": true,
+    "categories": [
+        "work",
+        "meeting",
+        "personal",
+        "important",
+        "default"
+    ],
+    "total_categories": 5
+}
+```
 
-### 智能时长设置
-系统会根据日程类型自动设置合适的时长：
-- **短时间活动**（提醒、休息、站立）：5分钟
-- **工作相关**（会议、工作）：1小时
-- **根据标题判断**：包含"提醒"、"休息"等关键词的短时间活动
-- **默认情况**：30分钟
+## Best Practices
 
-### 时间表达解析
-支持多种时间格式：
-- ISO标准格式：`2025-07-15T14:00:00`
-- 相对时间：今天、明天、下周等
-- 自然语言：上午10点、下午3点等
+### 1. Event Creation
+- Use clear and descriptive titles
+- Set appropriate categories for easy filtering
+- Consider setting reminders for important events
+- Specify end times for events with fixed durations
 
-### 分类智能识别
-系统能够根据日程内容自动识别合适的分类：
-- 包含"会议"关键词 → 会议分类
-- 包含"休息"关键词 → 休息分类
-- 包含"工作"关键词 → 工作分类
+### 2. Event Query
+- Use date types for common queries
+- Filter by category for specific needs
+- Use upcoming events for time-sensitive planning
+- Custom date ranges for detailed analysis
 
-## 最佳实践
+### 3. Event Management
+- Regularly update event information
+- Delete expired or unnecessary events
+- Use batch operations for efficiency
+- Maintain consistent category usage
 
-### 1. 时间格式规范
-- 使用ISO 8601格式：`YYYY-MM-DDTHH:MM:SS`
-- 确保时间的准确性，包括时区信息
-- 结束时间应晚于开始时间
+### 4. Performance Optimization
+- Avoid creating too many short-duration events
+- Use appropriate query ranges
+- Clean up old events regularly
+- Use batch operations for bulk changes
 
-### 2. 分类管理
-- 使用一致的分类命名
-- 创建有意义的分类名称
-- 定期清理不再使用的分类
+## Supported Event Types
 
-### 3. 提醒设置
-- 根据日程重要性设置合适的提醒时间
-- 重要会议建议提前30分钟或更早提醒
-- 日常提醒可以设置较短的时间
+### Work Events
+- Meetings and appointments
+- Project deadlines
+- Team activities
+- Work reminders
 
-### 4. 日程规划
-- 合理安排日程间的间隔时间
-- 避免安排过于紧密的日程
-- 定期回顾和调整日程安排
+### Personal Events
+- Appointments and reservations
+- Personal reminders
+- Social activities
+- Health and wellness
 
-## 注意事项
+### System Events
+- Automated reminders
+- System notifications
+- Maintenance schedules
+- Backup schedules
 
-1. **时间冲突**: 系统会检测时间冲突，建议避免重叠的日程
-2. **时区处理**: 确保时间格式包含正确的时区信息
-3. **数据持久化**: 日程数据会自动保存到本地数据库
-4. **性能考虑**: 批量操作时注意数据量大小
+## Precautions
 
-## 故障排除
+1. **Time Zone**: All times are in UTC timezone
+2. **Event Limits**: Avoid creating too many concurrent events
+3. **Data Persistence**: Events are stored in memory and may be lost on restart
+4. **Conflict Detection**: System may warn about overlapping events
+5. **Reminder Accuracy**: Reminder timing depends on system load
 
-### 常见问题
-1. **时间格式错误**: 确保使用正确的ISO格式
-2. **事件不存在**: 检查事件ID是否正确
-3. **时间冲突**: 调整时间或删除冲突的日程
-4. **分类问题**: 检查分类名称是否正确
+## Troubleshooting
 
-### 调试方法
-1. 检查时间参数格式
-2. 验证事件ID的有效性
-3. 查看返回的错误信息
-4. 使用查询工具验证数据状态
+### Common Issues
+1. **Event Creation Failure**: Check time format and required parameters
+2. **Query No Results**: Verify date range and category filters
+3. **Update Failure**: Confirm event ID exists and parameters are valid
+4. **Delete Failure**: Check event ID and permissions
 
-通过日程管理工具，您可以轻松管理个人和团队的日程安排，提高时间管理效率。
+### Debugging Methods
+1. Verify parameter formats and values
+2. Check event ID existence
+3. Test with simple examples first
+4. Use category queries to verify data
+
+### Performance Tips
+1. Use appropriate date ranges for queries
+2. Batch operations for multiple changes
+3. Regular cleanup of old events
+4. Consistent category usage for better organization
+
+With Calendar Tools, you can efficiently manage your schedule, set reminders, and organize your time effectively for both work and personal activities.
