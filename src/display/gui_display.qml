@@ -9,7 +9,7 @@ Rectangle {
     height: 500
     color: "#f5f5f5"
 
-    // 信号定义 - 与 Python 回调对接
+    // Signal definitions - connect with Python callbacks
     signal manualButtonPressed()
     signal manualButtonReleased()
     signal autoButtonClicked()
@@ -17,20 +17,20 @@ Rectangle {
     signal modeButtonClicked()
     signal sendButtonClicked(string text)
     signal settingsButtonClicked()
-    // 标题栏相关信号
+    // Title bar related signals
     signal titleMinimize()
     signal titleClose()
     signal titleDragStart(real mouseX, real mouseY)
     signal titleDragMoveTo(real mouseX, real mouseY)
     signal titleDragEnd()
 
-    // 主布局
+    // Main layout
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: 0
         spacing: 0
 
-        // 自定义标题栏：最小化、关闭、可拖动
+        // Custom title bar: minimize, close, draggable
         Rectangle {
             id: titleBar
             Layout.fillWidth: true
@@ -38,8 +38,8 @@ Rectangle {
             color: "#f7f8fa"
             border.width: 0
 
-            // 整条标题栏拖动（使用屏幕坐标，避免累计误差导致抖动）
-            // 放在最底层，让按钮的 MouseArea 可以优先响应
+            // Whole title bar drag (using screen coordinates to avoid cumulative error causing jitter)
+            // Placed at the bottom layer so button MouseArea can respond first
             MouseArea {
                 anchors.fill: parent
                 acceptedButtons: Qt.LeftButton
@@ -54,7 +54,7 @@ Rectangle {
                 onReleased: {
                     root.titleDragEnd()
                 }
-                z: 0  // 最底层
+                z: 0  // Bottom layer
             }
 
             RowLayout {
@@ -62,17 +62,17 @@ Rectangle {
                 anchors.leftMargin: 10
                 anchors.rightMargin: 8
                 spacing: 8
-                z: 1  // 按钮层在拖动层上方
+                z: 1  // Button layer above drag layer
 
-                // 左侧拖动区域
+                // Left drag area
                 Item { id: dragArea; Layout.fillWidth: true; Layout.fillHeight: true }
 
-                // 最小化
+                // Minimize
                 Rectangle {
                     id: btnMin
                     width: 24; height: 24; radius: 6
                     color: btnMinMouse.pressed ? "#e5e6eb" : (btnMinMouse.containsMouse ? "#f2f3f5" : "transparent")
-                    z: 2  // 确保按钮在最上层
+                    z: 2  // Ensure button is at the top layer
                     Text { anchors.centerIn: parent; text: "–"; font.pixelSize: 14; color: "#4e5969" }
                     MouseArea {
                         id: btnMinMouse
@@ -82,12 +82,12 @@ Rectangle {
                     }
                 }
 
-                // 关闭
+                // Close
                 Rectangle {
                     id: btnClose
                     width: 24; height: 24; radius: 6
                     color: btnCloseMouse.pressed ? "#f53f3f" : (btnCloseMouse.containsMouse ? "#ff7875" : "transparent")
-                    z: 2  // 确保按钮在最上层
+                    z: 2  // Ensure button is at the top layer
                     Text { anchors.centerIn: parent; text: "×"; font.pixelSize: 14; color: btnCloseMouse.containsMouse ? "white" : "#86909c" }
                     MouseArea {
                         id: btnCloseMouse
@@ -99,7 +99,7 @@ Rectangle {
             }
         }
 
-        // 状态卡片区域
+        // Status card area
         Rectangle {
             id: statusCard
             Layout.fillWidth: true
@@ -111,7 +111,7 @@ Rectangle {
                 anchors.margins: 20
                 spacing: 20
 
-                // 状态标签
+                // Status label
                 Rectangle {
                     Layout.fillWidth: true
                     Layout.preferredHeight: 48
@@ -120,7 +120,7 @@ Rectangle {
 
                     Text {
                         anchors.centerIn: parent
-                        text: displayModel ? displayModel.statusText : "状态: 未连接"
+                        text: displayModel ? displayModel.statusText : "Status: Not connected"
                         font.family: "PingFang SC, Microsoft YaHei UI"
                         font.pixelSize: 14
                         font.weight: Font.Bold
@@ -128,13 +128,13 @@ Rectangle {
                     }
                 }
 
-                // 表情显示区域
+                // Emotion display area
                 Item {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     Layout.minimumHeight: 120
 
-                    // 动态加载表情：AnimatedImage 用于 GIF，Image 用于静态图，Text 用于 emoji
+                    // Dynamic emotion loading: AnimatedImage for GIF, Image for static images, Text for emoji
                     Loader {
                         id: emotionLoader
                         anchors.centerIn: parent
@@ -155,7 +155,7 @@ Rectangle {
                             return emojiComponent
                         }
 
-                        // GIF 动图组件
+                        // GIF animation component
                         Component {
                             id: gifComponent
                             AnimatedImage {
@@ -167,7 +167,7 @@ Rectangle {
                             }
                         }
 
-                        // 静态图片组件
+                        // Static image component
                         Component {
                             id: imageComponent
                             Image {
@@ -177,7 +177,7 @@ Rectangle {
                             }
                         }
 
-                        // Emoji 文本组件
+                        // Emoji text component
                         Component {
                             id: emojiComponent
                             Text {
@@ -190,7 +190,7 @@ Rectangle {
                     }
                 }
 
-                // TTS 文本显示区域
+                // TTS text display area
                 Rectangle {
                     Layout.fillWidth: true
                     Layout.preferredHeight: 80
@@ -199,7 +199,7 @@ Rectangle {
                     Text {
                         anchors.fill: parent
                         anchors.margins: 15
-                        text: displayModel ? displayModel.ttsText : "待命"
+                        text: displayModel ? displayModel.ttsText : "Standby"
                         font.family: "PingFang SC, Microsoft YaHei UI"
                         font.pixelSize: 14
                         color: "#555555"
@@ -211,7 +211,7 @@ Rectangle {
             }
         }
 
-        // 按钮区域（统一配色与尺寸）
+        // Button area (unified colors and dimensions)
         Rectangle {
             Layout.fillWidth: true
             Layout.preferredHeight: 72
@@ -224,12 +224,12 @@ Rectangle {
                 anchors.bottomMargin: 12
                 spacing: 10
 
-                // 手动模式按钮（按住说话） - 主色
+                // Manual mode button (hold to speak) - primary color
                 Button {
                     id: manualBtn
                     Layout.preferredWidth: 140
                     Layout.preferredHeight: 40
-                    text: "按住后说话"
+                    text: "Hold to speak"
                     visible: displayModel ? !displayModel.autoMode : true
 
                     background: Rectangle {
@@ -248,16 +248,16 @@ Rectangle {
                         verticalAlignment: Text.AlignVCenter
                     }
 
-                    onPressed: { manualBtn.text = "松开以停止"; root.manualButtonPressed() }
-                    onReleased: { manualBtn.text = "按住后说话"; root.manualButtonReleased() }
+                    onPressed: { manualBtn.text = "Release to stop"; root.manualButtonPressed() }
+                    onReleased: { manualBtn.text = "Hold to speak"; root.manualButtonReleased() }
                 }
 
-                // 自动模式按钮 - 主色
+                // Auto mode button - primary color
                 Button {
                     id: autoBtn
                     Layout.preferredWidth: 140
                     Layout.preferredHeight: 40
-                    text: displayModel ? displayModel.buttonText : "开始对话"
+                    text: displayModel ? displayModel.buttonText : "Start conversation"
                     visible: displayModel ? displayModel.autoMode : false
 
                     background: Rectangle {
@@ -270,19 +270,19 @@ Rectangle {
                     onClicked: root.autoButtonClicked()
                 }
 
-                // 打断对话 - 次要色
+                // Interrupt conversation - secondary color
                 Button {
                     id: abortBtn
                     Layout.preferredWidth: 120
                     Layout.preferredHeight: 40
-                    text: "打断对话"
+                    text: "Interrupt"
 
                     background: Rectangle { color: abortBtn.pressed ? "#e5e6eb" : (abortBtn.hovered ? "#f2f3f5" : "#eceff3"); radius: 8 }
                     contentItem: Text { text: abortBtn.text; font.family: "PingFang SC, Microsoft YaHei UI"; font.pixelSize: 13; color: "#1d2129"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                     onClicked: root.abortButtonClicked()
                 }
 
-                // 输入 + 发送
+                // Input + Send
                 RowLayout {
                     Layout.fillWidth: true
                     Layout.preferredHeight: 40
@@ -308,8 +308,8 @@ Rectangle {
                             selectByMouse: true
                             clip: true
 
-                            // 占位符
-                            Text { anchors.fill: parent; text: "输入文字..."; font: textInput.font; color: "#c9cdd4"; verticalAlignment: Text.AlignVCenter; visible: !textInput.text && !textInput.activeFocus }
+                            // Placeholder
+                            Text { anchors.fill: parent; text: "Enter text..."; font: textInput.font; color: "#c9cdd4"; verticalAlignment: Text.AlignVCenter; visible: !textInput.text && !textInput.activeFocus }
 
                             Keys.onReturnPressed: { if (textInput.text.trim().length > 0) { root.sendButtonClicked(textInput.text); textInput.text = "" } }
                         }
@@ -319,30 +319,30 @@ Rectangle {
                         id: sendBtn
                         Layout.preferredWidth: 84
                         Layout.preferredHeight: 40
-                        text: "发送"
+                        text: "Send"
                         background: Rectangle { color: sendBtn.pressed ? "#0e42d2" : (sendBtn.hovered ? "#4080ff" : "#165dff"); radius: 8 }
                         contentItem: Text { text: sendBtn.text; font.family: "PingFang SC, Microsoft YaHei UI"; font.pixelSize: 13; color: "white"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                         onClicked: { if (textInput.text.trim().length > 0) { root.sendButtonClicked(textInput.text); textInput.text = "" } }
                     }
                 }
 
-                // 模式（次要）
+                // Mode (secondary)
                 Button {
                     id: modeBtn
                     Layout.preferredWidth: 120
                     Layout.preferredHeight: 40
-                    text: displayModel ? displayModel.modeText : "手动对话"
+                    text: displayModel ? displayModel.modeText : "Manual conversation"
                     background: Rectangle { color: modeBtn.pressed ? "#e5e6eb" : (modeBtn.hovered ? "#f2f3f5" : "#eceff3"); radius: 8 }
                     contentItem: Text { text: modeBtn.text; font.family: "PingFang SC, Microsoft YaHei UI"; font.pixelSize: 13; color: "#1d2129"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                     onClicked: root.modeButtonClicked()
                 }
 
-                // 设置（次要）
+                // Settings (secondary)
                 Button {
                     id: settingsBtn
                     Layout.preferredWidth: 120
                     Layout.preferredHeight: 40
-                    text: "参数配置"
+                    text: "Settings"
                     background: Rectangle { color: settingsBtn.pressed ? "#e5e6eb" : (settingsBtn.hovered ? "#f2f3f5" : "#eceff3"); radius: 8 }
                     contentItem: Text { text: settingsBtn.text; font.family: "PingFang SC, Microsoft YaHei UI"; font.pixelSize: 13; color: "#1d2129"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                     onClicked: root.settingsButtonClicked()
