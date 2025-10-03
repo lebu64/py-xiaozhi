@@ -32,6 +32,8 @@ py-xiaozhi is a Python-based Xiaozhi voice client, designed to learn coding and 
 
 ## Demo
 
+- [Bilibili Demo Video (Chinese)](https://www.bilibili.com/video/BV1HmPjeSED2/#reply255921347937)
+
 ![Image](./application.png)
 
 ## Features

@@ -7,13 +7,13 @@
 .idea/
 venv/
 
-# 音乐缓存
+# Music cache
 cache/
 
 
 /models
 
-# 打包相关
+# Packaging related
 /build
 /dist
 

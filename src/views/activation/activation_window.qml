@@ -9,7 +9,7 @@ Rectangle {
     height: 420
     color: "transparent"
 
-    // 信号定义
+    // Signal definitions
     signal copyCodeClicked()
     signal retryClicked()
     signal closeClicked()
@@ -17,13 +17,13 @@ Rectangle {
     Rectangle {
         id: mainContainer
         anchors.fill: parent
-        anchors.margins: 8  // 为阴影留出空间
+        anchors.margins: 8  // Space for shadow
         color: "#ffffff"
-        radius: 10  // QML圆角，提供更好的抗锯齿效果
+        radius: 10  // QML rounded corners, provides better anti-aliasing
         border.width: 0
         antialiasing: true
 
-        // 添加窗口阴影效果
+        // Add window shadow effect
         layer.enabled: true
         layer.effect: DropShadow {
             horizontalOffset: 0
@@ -39,13 +39,13 @@ Rectangle {
             anchors.margins: 20
             spacing: 20
 
-            // ArcoDesign 标题区域
+            // ArcoDesign title area
             RowLayout {
                 Layout.fillWidth: true
                 spacing: 16
 
                 Text {
-                    text: "设备激活"
+                    text: "Device Activation"
                     font.family: "PingFang SC, Microsoft YaHei UI, Helvetica Neue"
                     font.pixelSize: 20
                     font.weight: Font.Medium
@@ -54,7 +54,7 @@ Rectangle {
 
                 Item { Layout.fillWidth: true }
 
-                // 激活状态显示区域
+                // Activation status display area
                 RowLayout {
                     spacing: 8
 
@@ -66,22 +66,22 @@ Rectangle {
 
                         function getArcoStatusColor() {
                             var status = activationModel.activationStatus
-                            if (status === "已激活") return "#00b42a"
-                            if (status === "激活中...") return "#ff7d00"
-                            if (status.includes("不一致")) return "#f53f3f"
+                            if (status === "Activated") return "#00b42a"
+                            if (status === "Activating...") return "#ff7d00"
+                            if (status.includes("mismatch")) return "#f53f3f"
                             return "#f53f3f"
                         }
                     }
 
                     Text {
-                        text: activationModel ? activationModel.activationStatus : "未激活"
+                        text: activationModel ? activationModel.activationStatus : "Not Activated"
                         font.family: "PingFang SC, Microsoft YaHei UI"
                         font.pixelSize: 12
                         color: "#4e5969"
                     }
                 }
 
-                // 关闭按钮
+                // Close button
                 Button {
                     id: windowCloseBtn
                     width: 32
@@ -94,7 +94,7 @@ Rectangle {
                         border.width: 0
                         antialiasing: true
 
-                        // 颜色过渡动效
+                        // Color transition animation
                         Behavior on color {
                             ColorAnimation {
                                 duration: 200
@@ -102,7 +102,7 @@ Rectangle {
                             }
                         }
 
-                        // 缩放动效
+                        // Scale animation
                         scale: windowCloseBtn.pressed ? 0.9 : (windowCloseBtn.hovered ? 1.1 : 1.0)
                         Behavior on scale {
                             NumberAnimation {
@@ -121,7 +121,7 @@ Rectangle {
                         horizontalAlignment: Text.AlignHCenter
                         verticalAlignment: Text.AlignVCenter
 
-                        // 文字颜色过渡动效
+                        // Text color transition animation
                         Behavior on color {
                             ColorAnimation {
                                 duration: 200
@@ -134,7 +134,7 @@ Rectangle {
                 }
             }
 
-            // ArcoDesign 设备信息卡片 - 紧凑显示
+            // ArcoDesign device information card - compact display
             Rectangle {
                 id: deviceInfoCard
                 Layout.fillWidth: true
@@ -144,7 +144,7 @@ Rectangle {
                 border.width: 0
                 antialiasing: true
 
-                // 颜色过渡动效
+                // Color transition animation
                 Behavior on color {
                     ColorAnimation {
                         duration: 200
@@ -152,7 +152,7 @@ Rectangle {
                     }
                 }
 
-                // 鼠标悬停检测
+                // Mouse hover detection
                 MouseArea {
                     id: deviceInfoMouseArea
                     anchors.fill: parent
@@ -168,13 +168,13 @@ Rectangle {
 
                     Item { Layout.fillHeight: true } // Top spacer
 
-                    // 设备信息区域
+                    // Device information area
                     ColumnLayout {
                         Layout.fillWidth: true
                         spacing: 8
 
                         Text {
-                            text: "设备信息"
+                            text: "Device Information"
                             font.family: "PingFang SC, Microsoft YaHei UI"
                             font.pixelSize: 13
                             font.weight: Font.Medium
@@ -188,14 +188,14 @@ Rectangle {
                             rowSpacing: 6
 
                             Text {
-                                text: "设备序列号"
+                                text: "Device Serial Number"
                                 font.family: "PingFang SC, Microsoft YaHei UI"
                                 font.pixelSize: 12
                                 color: "#86909c"
                             }
 
                             Text {
-                                text: "MAC地址"
+                                text: "MAC Address"
                                 font.family: "PingFang SC, Microsoft YaHei UI"
                                 font.pixelSize: 12
                                 color: "#86909c"
@@ -221,7 +221,7 @@ Rectangle {
                 }
             }
 
-            // ArcoDesign 激活验证码卡片 - 一行显示
+            // ArcoDesign activation code card - single line display
             Rectangle {
                 id: activationCodeCard
                 Layout.fillWidth: true
@@ -231,7 +231,7 @@ Rectangle {
                 border.width: 0
                 antialiasing: true
 
-                // 颜色过渡动效
+                // Color transition animation
                 Behavior on color {
                     ColorAnimation {
                         duration: 200
@@ -239,7 +239,7 @@ Rectangle {
                     }
                 }
 
-                // 鼠标悬停检测
+                // Mouse hover detection
                 MouseArea {
                     id: activationCodeMouseArea
                     anchors.fill: parent
@@ -254,7 +254,7 @@ Rectangle {
                     spacing: 16
 
                     Text {
-                        text: "激活验证码"
+                        text: "Activation Code"
                         font.family: "PingFang SC, Microsoft YaHei UI"
                         font.pixelSize: 13
                         font.weight: Font.Medium
@@ -283,7 +283,7 @@ Rectangle {
 
                     Button {
                         id: copyCodeBtn
-                        text: "复制"
+                        text: "Copy"
                         Layout.preferredWidth: 80
                         height: 36
 
@@ -294,7 +294,7 @@ Rectangle {
                             border.width: 0
                             antialiasing: true
 
-                            // 颜色过渡动效
+                            // Color transition animation
                             Behavior on color {
                                 ColorAnimation {
                                     duration: 200
@@ -302,7 +302,7 @@ Rectangle {
                                 }
                             }
 
-                            // 缩放动效
+                            // Scale animation
                             scale: copyCodeBtn.pressed ? 0.95 : (copyCodeBtn.hovered ? 1.05 : 1.0)
                             Behavior on scale {
                                 NumberAnimation {
@@ -321,7 +321,7 @@ Rectangle {
                 }
             }
 
-            // ArcoDesign 按钮区域
+            // ArcoDesign button area
             RowLayout {
                 Layout.fillWidth: true
                 Layout.preferredHeight: 40
@@ -329,7 +329,7 @@ Rectangle {
 
                 Button {
                     id: retryBtn
-                    text: "跳转激活"
+                    text: "Go to Activation"
                     Layout.fillWidth: true
                     Layout.preferredHeight: 36
 
@@ -340,7 +340,7 @@ Rectangle {
                         border.width: 0
                         antialiasing: true
 
-                        // 颜色过渡动效
+                        // Color transition animation
                         Behavior on color {
                             ColorAnimation {
                                 duration: 200
@@ -348,7 +348,7 @@ Rectangle {
                             }
                         }
 
-                        // 缩放动效
+                        // Scale animation
                         scale: retryBtn.pressed ? 0.98 : (retryBtn.hovered ? 1.02 : 1.0)
                         Behavior on scale {
                             NumberAnimation {
@@ -357,7 +357,7 @@ Rectangle {
                             }
                         }
 
-                        // 添加微妙阴影
+                        // Add subtle shadow
                         layer.enabled: true
                         layer.effect: DropShadow {
                             horizontalOffset: 0

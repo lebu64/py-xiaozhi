@@ -1,30 +1,30 @@
 {
   "name": "xiaozhi",
-  "display_name": "小智AI助手",
+  "display_name": "Xiaozhi AI Assistant",
   "version": "1.0.0",
   "entry": "main.py",
-  "publisher": "小智AI Team",
-  "description": "基于AI的智能语音助手，支持语音识别、对话交互和多种智能功能",
+  "publisher": "Xiaozhi AI Team",
+  "description": "AI-powered intelligent voice assistant, supporting speech recognition, conversational interaction, and various smart features",
   "platforms": {
     "macos": {
       "bundle_identifier": "com.xiaozhi.ai.assistant",
       "minimum_system_version": "10.15.0",
       "category": "public.app-category.productivity",
-      "copyright": "© 2024 小智AI Team. All rights reserved.",
+      "copyright": "© 2024 Xiaozhi AI Team. All rights reserved.",
       "high_resolution_capable": true,
       "supports_automatic_graphics_switching": true,
       "osx_entitlements_file": "auto_generated_entitlements.plist",
-      "microphone_usage_description": "AI语音助手需要访问麦克风进行语音识别和语音交互",
-      "camera_usage_description": "AI语音助手需要访问摄像头进行视频通话和人脸识别",
-      "speech_recognition_usage_description": "AI语音助手需要使用语音识别功能来理解您的语音指令",
-      "local_network_usage_description": "AI语音助手需要网络访问来提供在线服务",
-      "audio_usage_description": "AI语音助手需要音频访问权限进行语音识别和播放",
-      "accessibility_usage_description": "AI语音助手需要辅助功能权限来监听全局快捷键和自动化操作",
-      "documents_folder_usage_description": "AI语音助手需要访问文档文件夹来保存和读取用户数据",
-      "downloads_folder_usage_description": "AI语音助手需要访问下载文件夹来管理下载的文件",
-      "apple_events_usage_description": "AI语音助手需要发送 Apple Events 来与其他 macOS 应用程序进行交互",
+      "microphone_usage_description": "AI voice assistant needs microphone access for speech recognition and voice interaction",
+      "camera_usage_description": "AI voice assistant needs camera access for video calls and face recognition",
+      "speech_recognition_usage_description": "AI voice assistant needs speech recognition to understand your voice commands",
+      "local_network_usage_description": "AI voice assistant needs network access to provide online services",
+      "audio_usage_description": "AI voice assistant needs audio access for speech recognition and playback",
+      "accessibility_usage_description": "AI voice assistant needs accessibility permissions to listen for global shortcuts and automate operations",
+      "documents_folder_usage_description": "AI voice assistant needs access to documents folder to save and read user data",
+      "downloads_folder_usage_description": "AI voice assistant needs access to downloads folder to manage downloaded files",
+      "apple_events_usage_description": "AI voice assistant needs to send Apple Events to interact with other macOS applications",
       "dmg": {
-        "volname": "小智AI助手安装器",
+        "volname": "Xiaozhi AI Assistant Installer",
         "window_size": [
           600,
           450
@@ -33,7 +33,7 @@
         "format": "UDZO"
       },
       "zip": {
-        "readme_content": "小智AI助手 v1.0.0\n\n这是一个基于AI的智能语音助手应用程序，支持语音识别、智能对话和多种实用功能。\n\n安装说明:\n1. 解压ZIP文件到任意位置\n2. 双击运行 xiaozhi.app\n3. 根据系统提示允许麦克风访问权限\n\n系统要求:\n- macOS 10.15 或更高版本\n- 至少 200MB 可用磁盘空间\n- 麦克风访问权限（用于语音识别）\n- 网络连接（用于AI服务）\n\n功能特性:\n🎙️ 智能语音识别与交互\n🤖 AI驱动的智能对话\n📱 简洁直观的用户界面\n🔒 本地数据安全保护\n⚡ 快速响应与高效处理\n🎯 多场景智能助手功能\n\n技术支持: support@xiaozhi.ai\n© 2024 小智AI Team. All rights reserved.",
+        "readme_content": "Xiaozhi AI Assistant v1.0.0\n\nThis is an AI-powered intelligent voice assistant application that supports speech recognition, intelligent conversation, and various practical features.\n\nInstallation Instructions:\n1. Extract the ZIP file to any location\n2. Double-click to run xiaozhi.app\n3. Allow microphone access according to system prompts\n\nSystem Requirements:\n- macOS 10.15 or higher\n- At least 200MB available disk space\n- Microphone access (for speech recognition)\n- Network connection (for AI services)\n\nFeatures:\n🎙️ Intelligent speech recognition and interaction\n🤖 AI-driven intelligent conversation\n📱 Clean and intuitive user interface\n🔒 Local data security protection\n⚡ Fast response and efficient processing\n🎯 Multi-scenario intelligent assistant functions\n\nTechnical Support: support@xiaozhi.ai\n© 2024 Xiaozhi AI Team. All rights reserved.",
         "license_file": "LICENSE",
         "extra_files": [
           {
@@ -58,7 +58,7 @@
         "allow_run_after_install": true,
         "license_file": "LICENSE",
         "readme_file": "README.md",
-        "app_publisher": "小智AI Team",
+        "app_publisher": "Xiaozhi AI Team",
         "app_id": "503E4A6A-DA22-5752-8253-F6CF03E9BFBF"
       }
     },
@@ -67,7 +67,7 @@
         "package": "xiaozhi-ai",
         "section": "sound",
         "priority": "optional",
-        "description": "AI语音助手应用程序，支持语音识别、对话交互和多种智能功能",
+        "description": "AI voice assistant application, supporting speech recognition, conversational interaction, and various smart features",
         "depends": [
           "libc6 (>= 2.17)",
           "libgtk-3-0 (>= 3.0)",
@@ -76,7 +76,7 @@
           "libqt5multimedia5 (>= 5.12)",
           "python3 (>= 3.8)"
         ],
-        "maintainer": "小智AI Team <support@xiaozhi.ai>",
+        "maintainer": "Xiaozhi AI Team <support@xiaozhi.ai>",
         "desktop_entry": true,
         "categories": [
           "AudioVideo",
@@ -91,7 +91,7 @@
           "Audio",
           "Recorder"
         ],
-        "description": "AI语音助手应用程序"
+        "description": "AI voice assistant application"
       }
     }
   },

@@ -1,16 +1,16 @@
-"""WebRTC回声消除(AEC)演示脚本.
+"""WebRTC Echo Cancellation (AEC) Demo Script.
 
-该脚本用于演示WebRTC APM库的回声消除功能:
-1. 播放指定的音频文件(作为参考信号)
-2. 同时录制麦克风输入(包含回声和环境声音)
-3. 应用WebRTC回声消除处理
-4. 保存原始录音和处理后的录音，以便比较
+This script demonstrates the echo cancellation functionality of the WebRTC APM library:
+1. Play specified audio file (as reference signal)
+2. Simultaneously record microphone input (containing echo and ambient sounds)
+3. Apply WebRTC echo cancellation processing
+4. Save original recording and processed recording for comparison
 
-用法:
-    python webrtc_aec_demo.py [音频文件路径]
+Usage:
+    python webrtc_aec_demo.py [audio_file_path]
 
-示例:
-    python webrtc_aec_demo.py 鞠婧祎.wav
+Example:
+    python webrtc_aec_demo.py sample_audio.wav
 """
 
 import ctypes

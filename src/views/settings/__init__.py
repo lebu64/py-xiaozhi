@@ -1,5 +1,5 @@
 """
-设置相关模块.
+Settings related modules.
 """
 
 from .settings_window import SettingsWindow
