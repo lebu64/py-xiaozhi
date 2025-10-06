@@ -229,7 +229,7 @@ Rectangle {
                     id: manualBtn
                     Layout.preferredWidth: 140
                     Layout.preferredHeight: 40
-                    text: "Hold to speak"
+                    text: "Speak!"
                     visible: displayModel ? !displayModel.autoMode : true
 
                     background: Rectangle {
@@ -248,8 +248,8 @@ Rectangle {
                         verticalAlignment: Text.AlignVCenter
                     }
 
-                    onPressed: { manualBtn.text = "Release to stop"; root.manualButtonPressed() }
-                    onReleased: { manualBtn.text = "Hold to speak"; root.manualButtonReleased() }
+                    onPressed: { manualBtn.text = "Stop"; root.manualButtonPressed() }
+                    onReleased: { manualBtn.text = "Speak"; root.manualButtonReleased() }
                 }
 
                 // Auto mode button - primary color
@@ -257,7 +257,7 @@ Rectangle {
                     id: autoBtn
                     Layout.preferredWidth: 140
                     Layout.preferredHeight: 40
-                    text: displayModel ? displayModel.buttonText : "Start conversation"
+                    text: displayModel ? displayModel.buttonText : "Start"
                     visible: displayModel ? displayModel.autoMode : false
 
                     background: Rectangle {
@@ -331,7 +331,7 @@ Rectangle {
                     id: modeBtn
                     Layout.preferredWidth: 120
                     Layout.preferredHeight: 40
-                    text: displayModel ? displayModel.modeText : "Manual conversation"
+                    text: displayModel ? displayModel.modeText : "Manual"
                     background: Rectangle { color: modeBtn.pressed ? "#e5e6eb" : (modeBtn.hovered ? "#f2f3f5" : "#eceff3"); radius: 8 }
                     contentItem: Text { text: modeBtn.text; font.family: "PingFang SC, Microsoft YaHei UI"; font.pixelSize: 13; color: "#1d2129"; horizontalAlignment: Text.AlignHCenter; verticalAlignment: Text.AlignVCenter }
                     onClicked: root.modeButtonClicked()

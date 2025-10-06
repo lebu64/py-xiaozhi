@@ -139,8 +139,11 @@ QLabel {
         </size>
        </property>
        <property name="text">
-        <string>Press and Hold to Speak</string>
+        <string>Speak</string>
        </property>
+        <property name="toolTip">
+         <string>Press and hold to speak</string>
+        </property>
       </widget>
      </item>
      <item>
@@ -152,9 +155,12 @@ QLabel {
         </size>
        </property>
        <property name="text">
-        <string>Interrupt Conversation</string>
+        <string>Interrupt</string>
        </property>
-      </widget>
+         <property name="toolTip">
+         <string>Interrupt conversation</string>
+        </property>
+     </widget>
      </item>
      <item>
       <layout class="QHBoxLayout" name="text_input_layout">
@@ -198,8 +204,11 @@ QLabel {
         </size>
        </property>
        <property name="text">
-        <string>Start Conversation</string>
+        <string>Start</string>
        </property>
+        <property name="toolTip">
+         <string>Start conversation</string>
+        </property>
       </widget>
      </item>
      <item>
@@ -211,9 +220,12 @@ QLabel {
         </size>
        </property>
        <property name="text">
-        <string>Manual Conversation</string>
+        <string>Manual</string>
        </property>
-      </widget>
+         <property name="toolTip">
+         <string>Switch between manual and auto conversation</string>
+        </property>
+     </widget>
      </item>
       <item>
        <widget class="QPushButton" name="settings_btn">

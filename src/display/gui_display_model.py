@@ -35,8 +35,8 @@ class GuiDisplayModel(QObject):
         self._status_text = "Status: Not connected"
         self._emotion_path = ""  # Emotion resource path (GIF/image) or emoji character
         self._tts_text = "Standby"
-        self._button_text = "Start conversation"  # Auto mode button text
-        self._mode_text = "Manual conversation"  # Mode toggle button text
+        self._button_text = "Start"  # Auto mode button text
+        self._mode_text = "Manual"  # Mode toggle button text
         self._auto_mode = False  # Whether auto mode
         self._is_connected = False
 
@@ -144,6 +144,6 @@ class GuiDisplayModel(QObject):
         """
         self.autoMode = is_auto
         if is_auto:
-            self.modeText = "Auto conversation"
+            self.modeText = "Auto"
         else:
-            self.modeText = "Manual conversation"
+            self.modeText = "Manual"

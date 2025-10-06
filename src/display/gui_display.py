@@ -89,7 +89,7 @@ class GuiDisplay(BaseDisplay, QObject, metaclass=CombinedMeta):
         Manual mode button press event handling.
         """
         if self.manual_btn and self.manual_btn.isVisible():
-            self.manual_btn.setText("Release to stop")
+            self.manual_btn.setText("Speak!")
         if self.button_press_callback:
             self.button_press_callback()
 
@@ -98,7 +98,7 @@ class GuiDisplay(BaseDisplay, QObject, metaclass=CombinedMeta):
         Manual mode button release event handling.
         """
         if self.manual_btn and self.manual_btn.isVisible():
-            self.manual_btn.setText("Press and hold to speak")
+            self.manual_btn.setText("Speak")
         if self.button_release_callback:
             self.button_release_callback()
 
@@ -127,10 +127,10 @@ class GuiDisplay(BaseDisplay, QObject, metaclass=CombinedMeta):
         self.auto_mode = not self.auto_mode
 
         if self.auto_mode:
-            self._update_mode_button_status("Auto Conversation")
+            self._update_mode_button_status("Auto")
             self._switch_to_auto_mode()
         else:
-            self._update_mode_button_status("Manual Conversation")
+            self._update_mode_button_status("Manual")
             self._switch_to_manual_mode()
 
     def _switch_to_auto_mode(self):
