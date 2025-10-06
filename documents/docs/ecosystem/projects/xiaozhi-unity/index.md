@@ -1,6 +1,6 @@
 ---
 title: XiaoZhiAI_server32_Unity
-description: 基于Unity的小智AI视觉交互服务，实现语音与Live2D多模态人机交互体验
+description: Unity-based Xiaozhi AI visual interaction service, implementing voice and Live2D multimodal human-computer interaction experience
 ---
 
 # XiaoZhiAI_server32_Unity
@@ -10,192 +10,192 @@ description: 基于Unity的小智AI视觉交互服务，实现语音与Live2D多
     <img src="./images/logo.png" alt="Unity Logo">
   </div>
   <div class="project-badges">
-    <span class="badge platform">跨平台</span>
+    <span class="badge platform">Cross-platform</span>
     <span class="badge language">C#/Unity</span>
-    <span class="badge status">活跃开发中</span>
+    <span class="badge status">Active Development</span>
   </div>
 </div>
 
-## 项目简介
+## Project Introduction
 
-XiaoZhiAI_server32_Unity是一个基于Unity开发的AI应用程序，专注于提供高质量的语音交互和网络服务功能。本项目利用Unity的跨平台特性，支持多种设备和操作系统，包括PC、Android、iOS、WebGL和微信小程序，为用户提供流畅的AI语音与Live2D交互体验。
+XiaoZhiAI_server32_Unity is an AI application developed based on Unity, focusing on providing high-quality voice interaction and network service functions. This project leverages Unity's cross-platform features to support multiple devices and operating systems, including PC, Android, iOS, WebGL, and WeChat Mini Programs, providing users with a smooth AI voice and Live2D interaction experience.
 
-## 技术架构
+## Technical Architecture
 
-XiaoZhiAI_server32_Unity基于以下技术栈构建：
+XiaoZhiAI_server32_Unity is built on the following technology stack:
 
-- **开发引擎**：Unity 2020.3或更高版本
-- **目标平台**：PC、Android、iOS、WebGL、微信小程序
-- **核心功能模块**：
-  - **语音交互系统**：实时语音识别、自然语言处理、语音合成
-  - **Live2D交互**：服务端返回LLM表情交互Live2D
-  - **Mqtt硬件交互**：服务端functioncall处理IoT返回
+- **Development Engine**: Unity 2020.3 or higher
+- **Target Platforms**: PC, Android, iOS, WebGL, WeChat Mini Programs
+- **Core Function Modules**:
+  - **Voice Interaction System**: Real-time speech recognition, natural language processing, speech synthesis
+  - **Live2D Interaction**: Server returns LLM expression interaction Live2D
+  - **Mqtt Hardware Interaction**: Server functioncall handles IoT returns
 
-- **依赖包**：
-  - OPUS解码SDK
-  - WebSocket网络通信库
-  - YooAsset资源管理框架2.3.7版本
-  - YuikFrameWork (YOO分支)
-  - Hycrl热更新框架
+- **Dependencies**:
+  - OPUS decoding SDK
+  - WebSocket network communication library
+  - YooAsset resource management framework version 2.3.7
+  - YuikFrameWork (YOO branch)
+  - Hycrl hot update framework
 
 
-## 核心功能
+## Core Features
 
-### 语音交互能力
+### Voice Interaction Capabilities
 
 <div class="features-grid">
   <div class="feature-card">
     <div class="feature-icon">🎤</div>
-    <h3>实时语音识别</h3>
-    <p>支持多种语言的实时语音转文字，准确率高达95%以上</p>
+    <h3>Real-time Speech Recognition</h3>
+    <p>Supports real-time speech-to-text in multiple languages with accuracy over 95%</p>
   </div>
   
   <div class="feature-card">
     <div class="feature-icon">🧠</div>
-    <h3>自然语言理解</h3>
-    <p>基于深度学习的语义分析，精准理解用户意图</p>
+    <h3>Natural Language Understanding</h3>
+    <p>Deep learning-based semantic analysis for precise understanding of user intent</p>
   </div>
   
   <div class="feature-card">
     <div class="feature-icon">🔊</div>
-    <h3>语音合成</h3>
-    <p>自然流畅的语音输出，支持多种音色和语速调节</p>
+    <h3>Speech Synthesis</h3>
+    <p>Natural and smooth voice output, supports multiple voice tones and speed adjustment</p>
   </div>
   
   <div class="feature-card">
     <div class="feature-icon">🤖</div>
-    <h3>Live2D表情交互</h3>
-    <p>根据LLM返回结果实现实时表情变化和情感表达</p>
+    <h3>Live2D Expression Interaction</h3>
+    <p>Real-time expression changes and emotional expression based on LLM return results</p>
   </div>
   
   <div class="feature-card">
     <div class="feature-icon">📱</div>
-    <h3>IoT与Mqtt对接</h3>
-    <p>通过functioncall实现智能家居设备控制和状态反馈</p>
+    <h3>IoT and Mqtt Integration</h3>
+    <p>Smart home device control and status feedback through functioncall</p>
   </div>
   
   <div class="feature-card">
     <div class="feature-icon">🔄</div>
-    <h3>热更新支持</h3>
-    <p>基于Hycrl框架的热更新能力，无需重装即可升级</p>
+    <h3>Hot Update Support</h3>
+    <p>Hot update capability based on Hycrl framework, upgrade without reinstallation</p>
   </div>
 </div>
 
-## 环境要求
+## Environment Requirements
 
-### 开发环境
-- Unity版本：2020.3或更高
-- 操作系统：Windows 10/11（开发环境）
+### Development Environment
+- Unity Version: 2020.3 or higher
+- Operating System: Windows 10/11 (development environment)
 
-### 运行环境
-- **PC平台**：
-  - 操作系统：Windows 10/11、macOS 10.14+
-  - 处理器：Intel i5或同等性能
-  - 内存：8GB以上
-  - 显卡：支持DirectX 11
+### Runtime Environment
+- **PC Platform**:
+  - Operating System: Windows 10/11, macOS 10.14+
+  - Processor: Intel i5 or equivalent performance
+  - Memory: 8GB or more
+  - Graphics Card: Supports DirectX 11
   
-- **移动平台**：
+- **Mobile Platform**:
   - Android 6.0+
   - iOS 11.0+
   
-- **Web平台**：
-  - 支持WebGL 2.0的现代浏览器
+- **Web Platform**:
+  - Modern browsers supporting WebGL 2.0
 
-- **硬件要求**：
-  - 麦克风：支持16kHz采样率的高质量麦克风（语音交互）
-  - 网络：稳定的网络连接，建议5Mbps以上带宽
+- **Hardware Requirements**:
+  - Microphone: High-quality microphone supporting 16kHz sampling rate (for voice interaction)
+  - Network: Stable network connection, recommended 5Mbps or higher bandwidth
 
-## 项目结构
+## Project Structure
 
 ```
 XiaoZhiAI_server32_Unity/
-├── Assets/                      # Unity资源文件
-│   ├── Scenes/                  # 场景文件
-│   ├── Scripts/                 # 脚本文件
-│   │   ├── VoiceInteraction/    # 语音交互相关脚本
-│   │   ├── Networking/          # 网络通信相关脚本
+├── Assets/                      # Unity resource files
+│   ├── Scenes/                  # Scene files
+│   ├── Scripts/                 # Script files
+│   │   ├── VoiceInteraction/    # Voice interaction related scripts
+│   │   ├── Networking/          # Network communication related scripts
 │   │   └── ...
-│   ├── Prefabs/                 # 预制体
-│   ├── Plugins/                 # 第三方插件
-│   │   ├── VoiceSDK/            # 语音识别SDK
-│   │   └── NetworkLibs/         # 网络库
+│   ├── Prefabs/                 # Prefabs
+│   ├── Plugins/                 # Third-party plugins
+│   │   ├── VoiceSDK/            # Speech recognition SDK
+│   │   └── NetworkLibs/         # Network libraries
 │   └── ...
-├── Packages/                    # 项目依赖包
-├── ProjectSettings/             # Unity项目设置
-└── README.md                    # 项目说明文档
+├── Packages/                    # Project dependencies
+├── ProjectSettings/             # Unity project settings
+└── README.md                    # Project documentation
 ```
 
-## 安装指南
+## Installation Guide
 
-### 开发者安装
+### Developer Installation
 
-1. 克隆仓库到本地：
+1. Clone the repository locally:
    ```bash
    git clone https://gitee.com/vw112266/XiaoZhiAI_server32_Unity.git
    ```
 
-2. 安装依赖包：
-   - 手动引入YooAsset资源管理框架（v2.3.7）：https://github.com/tuyoogame/YooAsset
-   - 手动引入YuikFrameWork-YOO分支：https://gitee.com/NikaidoShinku/YukiFrameWork
+2. Install dependencies:
+   - Manually import YooAsset resource management framework (v2.3.7): https://github.com/tuyoogame/YooAsset
+   - Manually import YuikFrameWork-YOO branch: https://gitee.com/NikaidoShinku/YukiFrameWork
 
-3. 使用Unity Hub打开项目，并确保Unity版本兼容
+3. Open the project using Unity Hub and ensure Unity version compatibility
 
-### 用户安装
+### User Installation
 
-1. 从发布页下载对应平台的安装包
-2. 按照向导完成安装
-3. 启动应用并完成初始配置
+1. Download the installation package for the corresponding platform from the release page
+2. Complete installation following the wizard
+3. Launch the application and complete initial configuration
 
-## 功能特性展示
+## Feature Showcase
 
-### Live2D交互
+### Live2D Interaction
 
 <div class="feature-highlight">
   <div class="highlight-content">
-    <h3>表情丰富的Live2D模型</h3>
+    <h3>Expressive Live2D Models</h3>
     <ul>
-      <li>根据对话内容实时改变表情</li>
-      <li>支持多种情感状态表达</li>
-      <li>精准的口型同步</li>
-      <li>自然的眨眼和头部动作</li>
-      <li>可定制的角色形象</li>
+      <li>Real-time expression changes based on conversation content</li>
+      <li>Supports multiple emotional state expressions</li>
+      <li>Accurate lip synchronization</li>
+      <li>Natural blinking and head movements</li>
+      <li>Customizable character appearances</li>
     </ul>
   </div>
    <div class="highlight-image">
-    <img src="./images/界面1.png" alt="演示界面" >
+    <img src="./images/界面1.png" alt="Demo Interface" >
   </div>
 </div>
 
-### IoT智能控制
+### IoT Smart Control
 
 <div class="feature-highlight reverse">
   <div class="highlight-content">
-    <h3>家居设备智能控制</h3>
+    <h3>Smart Home Device Control</h3>
     <ul>
-      <li>通过语音控制智能家居设备</li>
-      <li>基于functioncall的智能意图识别</li>
-      <li>支持多种MQTT协议设备</li>
-      <li>设备状态实时反馈</li>
-      <li>场景联动与自动化</li>
+      <li>Control smart home devices through voice</li>
+      <li>Intelligent intent recognition based on functioncall</li>
+      <li>Supports multiple MQTT protocol devices</li>
+      <li>Real-time device status feedback</li>
+      <li>Scene linkage and automation</li>
     </ul>
   </div>
   <div class="highlight-image">
-    <img src="./images/界面2.png" alt="演示界面">
+    <img src="./images/界面2.png" alt="Demo Interface">
   </div>
 </div>
 
-## 开发计划
+## Development Plan
 
 <div class="roadmap">
   <div class="roadmap-item done">
     <div class="status-dot"></div>
     <div class="item-content">
-      <h4>已完成功能</h4>
+      <h4>Completed Features</h4>
       <ul>
-        <li>基础语音交互系统</li>
-        <li>Live2D模型集成</li>
-        <li>WebSocket网络通信</li>
-        <li>基础MQTT支持</li>
+        <li>Basic voice interaction system</li>
+        <li>Live2D model integration</li>
+        <li>WebSocket network communication</li>
+        <li>Basic MQTT support</li>
       </ul>
     </div>
   </div>
@@ -203,12 +203,12 @@ XiaoZhiAI_server32_Unity/
   <div class="roadmap-item progress">
     <div class="status-dot"></div>
     <div class="item-content">
-      <h4>开发中功能</h4>
+      <h4>Features in Development</h4>
       <ul>
-        <li>更多Live2D模型支持</li>
-        <li>表情系统优化</li>
-        <li>移动平台性能优化</li>
-        <li>更多IoT设备支持</li>
+        <li>More Live2D model support</li>
+        <li>Expression system optimization</li>
+        <li>Mobile platform performance optimization</li>
+        <li>More IoT device support</li>
       </ul>
     </div>
   </div>
@@ -216,32 +216,32 @@ XiaoZhiAI_server32_Unity/
   <div class="roadmap-item planned">
     <div class="status-dot"></div>
     <div class="item-content">
-      <h4>计划功能</h4>
+      <h4>Planned Features</h4>
       <ul>
-        <li>微信小程序集成</li>
-        <li>AR互动体验</li>
-        <li>多角色场景支持</li>
-        <li>用户自定义模型系统</li>
+        <li>WeChat Mini Program integration</li>
+        <li>AR interactive experience</li>
+        <li>Multi-character scene support</li>
+        <li>User custom model system</li>
       </ul>
     </div>
   </div>
 </div>
 
-## 贡献指南
+## Contribution Guide
 
-我们欢迎社区开发者参与XiaoZhiAI_server32_Unity项目的开发：
+We welcome community developers to participate in the development of XiaoZhiAI_server32_Unity project:
 
-- 提交bug报告和功能建议
-- 贡献代码改进和新功能
-- 创建和分享Live2D模型
-- 优化性能和用户体验
-- 完善文档和教程
+- Submit bug reports and feature suggestions
+- Contribute code improvements and new features
+- Create and share Live2D models
+- Optimize performance and user experience
+- Improve documentation and tutorials
 
-请参考我们的贡献指南，了解如何参与项目开发。
+Please refer to our contribution guide to learn how to participate in project development.
 
-## 相关链接
+## Related Links
 
-- [项目仓库](https://gitee.com/vw112266/XiaoZhiAI_server32_Unity)
+- [Project Repository](https://gitee.com/vw112266/XiaoZhiAI_server32_Unity)
 
 <style>
 .project-header {
@@ -501,4 +501,4 @@ pre {
     flex-direction: column;
   }
 }
-</style> 
+</style>

@@ -1,190 +1,190 @@
 ---
-title: 小智手机端
-description: 基于Flutter的跨平台小智客户端，支持iOS、Android、Web等多平台
+title: Xiaozhi Mobile Client
+description: Cross-platform Xiaozhi client based on Flutter, supporting iOS, Android, Web and other platforms
 ---
 
-# 小智手机客户端
+# Xiaozhi Mobile Client
 
 <div class="project-header">
   <div class="project-logo">
-    <img src="https://avatars.githubusercontent.com/u/196275872?s=48&v=4" alt="小智手机客户端">
+    <img src="https://avatars.githubusercontent.com/u/196275872?s=48&v=4" alt="Xiaozhi Mobile Client">
   </div>
   <div class="project-badges">
-    <span class="badge platform">多平台</span>
+    <span class="badge platform">Multi-platform</span>
     <span class="badge language">Flutter/Dart</span>
-    <span class="badge status">活跃开发中</span>
+    <span class="badge status">Active Development</span>
   </div>
 </div>
 
-## 项目简介
+## Project Introduction
 
-小智手机客户端是基于Flutter框架开发的跨平台应用，为小智AI生态系统提供了移动端接入能力。通过一套代码，实现了在iOS、Android、Web、Windows、macOS和Linux等多个平台的部署，让用户随时随地都能与小智AI进行实时语音交互和文字对话。
+Xiaozhi Mobile Client is a cross-platform application developed based on the Flutter framework, providing mobile access capabilities for the Xiaozhi AI ecosystem. With one codebase, it achieves deployment on multiple platforms including iOS, Android, Web, Windows, macOS, and Linux, allowing users to engage in real-time voice interaction and text conversations with Xiaozhi AI anytime, anywhere.
 
 <div class="app-showcase">
   <div class="showcase-image">
-    <img src="./images/界面1.jpg" alt="应用展示" onerror="this.src='./images/界面1.jpg'; this.onerror=null;">
+    <img src="./images/界面1.jpg" alt="Application Showcase" onerror="this.src='./images/界面1.jpg'; this.onerror=null;">
     <div class="overlay">
-      <a href="https://www.bilibili.com/video/BV1fgXvYqE61" target="_blank" class="watch-demo">观看演示视频</a>
+      <a href="https://www.bilibili.com/video/BV1fgXvYqE61" target="_blank" class="watch-demo">Watch Demo Video</a>
     </div>
   </div>
   <div class="showcase-description">
-    <p>最新版本客户端已全面升级，支持iOS与Android平台，并可自行打包为Web、PC版本。通过精心设计的UI和流畅的交互体验，为用户提供随时随地与小智AI交流的能力。</p>
+    <p>The latest version of the client has been fully upgraded, supporting iOS and Android platforms, and can be packaged as Web and PC versions. Through carefully designed UI and smooth interactive experience, it provides users with the ability to communicate with Xiaozhi AI anytime, anywhere.</p>
   </div>
 </div>
 
-## 核心功能
+## Core Features
 
 <div class="features-grid">
   <div class="feature-card">
     <div class="feature-icon">📱</div>
-    <h3>跨平台支持</h3>
-    <p>使用Flutter开发，一套代码支持iOS、Android、Web、Windows、macOS和Linux等多平台</p>
+    <h3>Cross-platform Support</h3>
+    <p>Developed with Flutter, one codebase supports multiple platforms including iOS, Android, Web, Windows, macOS, and Linux</p>
   </div>
   
   <div class="feature-card">
     <div class="feature-icon">🤖</div>
-    <h3>多AI模型集成</h3>
-    <p>支持小智AI服务、Dify、OpenAI等多种AI服务，可随时切换不同模型</p>
+    <h3>Multiple AI Model Integration</h3>
+    <p>Supports various AI services including Xiaozhi AI service, Dify, OpenAI, with ability to switch between different models anytime</p>
   </div>
   
   <div class="feature-card">
     <div class="feature-icon">💬</div>
-    <h3>丰富交互方式</h3>
-    <p>支持实时语音对话、文字消息、图片消息，以及通话中手动打断功能</p>
+    <h3>Rich Interaction Methods</h3>
+    <p>Supports real-time voice conversations, text messages, image messages, and manual interruption during calls</p>
   </div>
   
   <div class="feature-card">
     <div class="feature-icon">🔊</div>
-    <h3>语音优化技术</h3>
-    <p>实现安卓设备AEC+NS回音消除，提升语音交互质量</p>
+    <h3>Voice Optimization Technology</h3>
+    <p>Implements AEC+NS echo cancellation for Android devices, improving voice interaction quality</p>
   </div>
   
   <div class="feature-card">
     <div class="feature-icon">🎨</div>
-    <h3>精美界面设计</h3>
-    <p>轻度拟物化设计、流畅动画效果、自适应UI布局</p>
+    <h3>Beautiful Interface Design</h3>
+    <p>Light skeuomorphic design, smooth animation effects, adaptive UI layout</p>
   </div>
   
   <div class="feature-card">
     <div class="feature-icon">⚙️</div>
-    <h3>灵活配置选项</h3>
-    <p>支持多种AI服务配置管理，可添加多个小智到聊天列表</p>
+    <h3>Flexible Configuration Options</h3>
+    <p>Supports multiple AI service configuration management, can add multiple Xiaozhi instances to chat list</p>
   </div>
 </div>
 
-## 功能亮点
+## Feature Highlights
 
-### 实时语音交互
+### Real-time Voice Interaction
 
 <div class="feature-highlight">
   <div class="highlight-image">
-    <img src="./images/界面1.jpg" alt="实时语音交互" onerror="this.src='./images/界面1.jpg'; this.onerror=null;">
+    <img src="./images/界面1.jpg" alt="Real-time Voice Interaction" onerror="this.src='./images/界面1.jpg'; this.onerror=null;">
   </div>
   <div class="highlight-content">
-    <h3>流畅的语音对话体验</h3>
+    <h3>Smooth Voice Conversation Experience</h3>
     <ul>
-      <li>实时语音识别和响应</li>
-      <li>支持持续对话模式</li>
-      <li>语音交互过程中支持手动打断</li>
-      <li>按住说话快捷模式</li>
-      <li>语音会话历史记录</li>
+      <li>Real-time speech recognition and response</li>
+      <li>Supports continuous conversation mode</li>
+      <li>Supports manual interruption during voice interaction</li>
+      <li>Hold-to-speak quick mode</li>
+      <li>Voice session history recording</li>
     </ul>
   </div>
 </div>
 
-### 多AI服务支持
+### Multiple AI Service Support
 
 <div class="feature-highlight reverse">
   <div class="highlight-content">
-    <h3>灵活切换不同AI服务</h3>
+    <h3>Flexible Switching Between Different AI Services</h3>
     <ul>
-      <li>集成小智WebSocket实时语音对话</li>
-      <li>支持Dify平台接入</li>
-      <li>支持OpenAI图文消息和流式输出</li>
-      <li>支持官方小智服务一键设备注册</li>
-      <li>可同时添加多个AI服务到对话列表</li>
+      <li>Integrated Xiaozhi WebSocket real-time voice conversation</li>
+      <li>Supports Dify platform integration</li>
+      <li>Supports OpenAI image-text messages and streaming output</li>
+      <li>Supports one-click device registration for official Xiaozhi service</li>
+      <li>Can add multiple AI services to conversation list simultaneously</li>
     </ul>
   </div>
   <div class="highlight-image">
-    <img src="./images/界面2.jpg" alt="多AI服务支持" onerror="this.src='./images/界面2.jpg'; this.onerror=null;">
+    <img src="./images/界面2.jpg" alt="Multiple AI Service Support" onerror="this.src='./images/界面2.jpg'; this.onerror=null;">
   </div>
 </div>
 
-## 系统要求
+## System Requirements
 
 - **Flutter**: ^3.7.0
 - **Dart**: ^3.7.0
 - **iOS**: 12.0+
 - **Android**: API 21+ (Android 5.0+)
-- **Web**: 现代浏览器
+- **Web**: Modern browsers
 
-## 安装与使用
+## Installation and Usage
 
-### 安装方法
+### Installation Method
 
-1. 克隆项目仓库:
+1. Clone the project repository:
 ```bash
 git clone https://github.com/TOM88812/xiaozhi-android-client.git
 ```
 
-2. 安装依赖:
+2. Install dependencies:
 ```bash
 flutter pub get
 ```
 
-3. 运行应用:
+3. Run the application:
 ```bash
 flutter run
 ```
 
-### 构建发布版本
+### Build Release Version
 
 ```bash
-# Android应用
+# Android application
 flutter build apk --release
 
-# iOS应用
+# iOS application
 flutter build ios --release
 
-# Web应用
+# Web application
 flutter build web --release
 ```
 
-> **注意**: iOS编译完成后，需要在设置-APP中打开网络权限
+> **Note**: After iOS compilation is complete, you need to enable network permissions in Settings-APP
 
-## 配置说明
+## Configuration Instructions
 
-应用支持灵活的服务配置管理，包括：
+The application supports flexible service configuration management, including:
 
-### 小智服务配置
-- 支持配置多个小智服务地址
-- WebSocket URL设置
-- Token认证
-- 自定义MAC地址
+### Xiaozhi Service Configuration
+- Supports configuring multiple Xiaozhi service addresses
+- WebSocket URL settings
+- Token authentication
+- Custom MAC address
 
-### Dify API配置
-- 支持配置多个Dify服务
-- API密钥管理
-- 服务器URL配置
+### Dify API Configuration
+- Supports configuring multiple Dify services
+- API key management
+- Server URL configuration
 
-### OpenAI配置
-- API密钥设置
-- 模型选择
-- 参数调整
+### OpenAI Configuration
+- API key settings
+- Model selection
+- Parameter adjustment
 
-## 开发计划
+## Development Plan
 
 <div class="roadmap">
   <div class="roadmap-item done">
     <div class="status-dot"></div>
     <div class="item-content">
-      <h4>已实现功能</h4>
+      <h4>Implemented Features</h4>
       <ul>
-        <li>支持多种AI服务提供商</li>
-        <li>支持OTA自动注册设备</li>
-        <li>增强语音识别准确性</li>
-        <li>实现文字和语音混合会话</li>
-        <li>支持OpenAI接口图文交互</li>
+        <li>Supports multiple AI service providers</li>
+        <li>Supports OTA automatic device registration</li>
+        <li>Enhanced speech recognition accuracy</li>
+        <li>Implemented text and voice mixed conversations</li>
+        <li>Supports OpenAI interface image-text interaction</li>
       </ul>
     </div>
   </div>
@@ -192,12 +192,12 @@ flutter build web --release
   <div class="roadmap-item progress">
     <div class="status-dot"></div>
     <div class="item-content">
-      <h4>正在开发</h4>
+      <h4>In Development</h4>
       <ul>
-        <li>深色/浅色主题适配</li>
-        <li>iOS平台回音消除实现</li>
-        <li>本地ASR语音识别支持</li>
-        <li>本地唤醒词功能</li>
+        <li>Dark/light theme adaptation</li>
+        <li>iOS platform echo cancellation implementation</li>
+        <li>Local ASR speech recognition support</li>
+        <li>Local wake word functionality</li>
       </ul>
     </div>
   </div>
@@ -205,30 +205,30 @@ flutter build web --release
   <div class="roadmap-item planned">
     <div class="status-dot"></div>
     <div class="item-content">
-      <h4>计划实现</h4>
+      <h4>Planned Implementation</h4>
       <ul>
-        <li>支持IoT映射手机操作</li>
-        <li>本地TTS实现</li>
-        <li>支持MCP_Client</li>
-        <li>OpenAI接口联网搜索功能</li>
+        <li>Supports IoT mapping for phone operations</li>
+        <li>Local TTS implementation</li>
+        <li>Supports MCP_Client</li>
+        <li>OpenAI interface internet search functionality</li>
       </ul>
     </div>
   </div>
 </div>
 
-## 项目贡献
+## Project Contribution
 
-欢迎为小智手机客户端贡献代码或提交问题反馈：
+Welcome to contribute code or submit issue feedback for Xiaozhi Mobile Client:
 
-- 目前iOS端回音消除尚未实现，欢迎有经验的开发者PR
-- 提交Bug、功能请求或改进建议
-- 分享您使用小智手机客户端的经验和案例
+- Currently, echo cancellation on iOS is not yet implemented, welcome experienced developers to submit PR
+- Submit bugs, feature requests, or improvement suggestions
+- Share your experience and use cases with Xiaozhi Mobile Client
 
-## 相关链接
+## Related Links
 
-- [项目GitHub仓库](https://github.com/TOM88812/xiaozhi-android-client)
-- [演示视频](https://www.bilibili.com/video/BV1fgXvYqE61)
-- [问题反馈](https://github.com/TOM88812/xiaozhi-android-client/issues)
+- [Project GitHub Repository](https://github.com/TOM88812/xiaozhi-android-client)
+- [Demo Video](https://www.bilibili.com/video/BV1fgXvYqE61)
+- [Issue Feedback](https://github.com/TOM88812/xiaozhi-android-client/issues)
 
 <style>
 .project-header {
@@ -497,4 +497,4 @@ flutter build web --release
     margin-bottom: 1rem;
   }
 }
-</style> 
+</style>
